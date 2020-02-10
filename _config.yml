@@ -2,7 +2,9 @@
 
 name: Kıvanç Yüksel
 description: Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MKA
+site_name: Emkademy
 # avatar:
+host: 0.0.0.0
 
 
 # Includes an icon in the footer for each username you enter
@@ -36,6 +38,10 @@ kramdown:
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :compressed
+  load_paths:
+      - _sass
+      - node_modules
+
 
 # Use the following plug-ins
 gems:
