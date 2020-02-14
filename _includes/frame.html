@@ -1,12 +1,23 @@
 {% include navbar.html %}
 
-<header class="masthead" style>
+{% if page.full_size %}
+<header class="full-height-image" style="background-image:url('{{site.url}}{% if collection.frame_image %}{{collection.frame_image}} {% else if site.frame_image %}{{site.frame_image}} {% else %}{{layout.frame_image}}{% endif %}')">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
-        <h1 class="font-weight-light">Vertically Centered Masthead Content</h1>
-        <p class="lead">A great starter layout for a landing page</p>
+        <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: 700px; width: auto"/></a>
       </div>
     </div>
   </div>
 </header>
+{% else %}
+<header class="half-height-image" style="background-image:url('{{site.url}}{% if page.frame_image %}{{page.frame_image}}{% else %}{{include.frame_image}}{% endif %}')">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: 700px; width: auto"/></a>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
