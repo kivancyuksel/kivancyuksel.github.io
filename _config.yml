@@ -6,7 +6,6 @@ site_name: Emkademy
 # avatar:
 host: 0.0.0.0
 
-
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
@@ -23,6 +22,33 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+collections:
+    kalkulus_oncesi:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+    deneme1:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+    deneme2:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+    deneme3:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+    deneme4:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+    deneme5:
+        title: Kalkülüs Öncesi
+        frame_image: /assets/img/logo_transparent_resized.png
+        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+
+
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
@@ -37,10 +63,10 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed
+  style: compressed
   load_paths:
       - _sass
-      - node_modules
+      - bootstrap_scss
 
 
 # Use the following plug-ins

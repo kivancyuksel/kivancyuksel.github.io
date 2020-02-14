@@ -1,6 +1,23 @@
 ---
 layout: default
+full_size: "true"
+frame_image: /assets/img/full_width_image.jpg
 ---
+
+<div>
+    {% for post in site.posts %}
+    <article>
+        <h1><a href="{{site.url}}{{post.url}}">{{post.title}}</a></h1>
+
+        <div class="entry">
+          {{ post.excerpt }}
+        </div>
+
+        <a href="{{site.url}}{{post.url}}">Devamını Gör</a>
+    </article>
+    {% endfor %}
+</div>
+
 
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempor ut nisl vitae interdum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin luctus sapien et metus molestie, id aliquet urna dictum. Mauris non maximus magna. Mauris convallis tortor non nisi scelerisque, nec rhoncus tortor viverra. Aenean interdum urna mi, quis tempor sem volutpat vel. Integer lobortis ipsum at elementum dictum. Mauris posuere cursus aliquam. Nulla facilisi. In nec sapien mattis risus elementum blandit.

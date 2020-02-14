@@ -1,0 +1,23 @@
+---
+layout: other
+---
+
+<div class="grid-container fluid text-center">
+    <div class="grid-x small-up-2 medium-up-3">
+        {% for collection in site.collections %}
+            {% unless collection.label == "posts" %}
+            <a href="#">
+                <div class="cell">
+                  <div class="card">
+                      <img src="{{site.url}}{{collection.category_image}}" style="display:block;height:auto;width:400px">
+                      <div class="card-section text-center">
+                          <h4>{{collection.title}}</h4>
+                      </div>
+                  </div>
+                </div>
+            </a>
+            {% endunless %}
+        {% endfor %}
+    </div>
+</div>
+

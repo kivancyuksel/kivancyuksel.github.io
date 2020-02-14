@@ -1,33 +1,18 @@
-<div class="cell medium-1">
-    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
-      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-      <div class="title-bar-title">Menu</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+  <div class="container">
+      <a class="navbar-brand" href="#">{{site.site_name}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kategoriler</a>
+        </li>
+      </ul>
     </div>
-
-    <div class="navbar" data-sticky-container>
-        <div class="top-bar" data-sticky data-options="marginTop:0;" id="responsive-menu">
-          <div class="top-bar-left">
-            <ul class="menu">
-                <li class="menu-text"><a href="{{site.baseurl}}">{{site.site_name}}</a></li>
-            </ul>
-          </div>
-
-          <div class="top-bar-right">
-            <ul class="dropdown menu" data-dropdown-menu>
-                <li><a href="{{site.baseurl}}">Ana Sayfa</a></li>
-              <!-- <li class="has-submenu">
-                <a href="#0">Kategoriler</a>
-                <ul class="submenu menu vertical" data-submenu>
-                  <li><a href="#0">Kalkulüs Öncesi</a></li>
-                  <li><a href="#0">Two</a></li>
-                  <li><a href="#0">Three</a></li>
-                </ul>
-              </li> -->
-              <li class="success"><a href="#0">Kategoriler</a></li>
-              <li><input type="search" placeholder="Search"></li>
-              <li><button type="button" class="button">Search</button></li>
-            </ul>
-          </div>
-        </div>
-    </div>
-</div>
+  </div>
+</nav>

@@ -2,38 +2,49 @@
 <html>
     <head>
         <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles.css" />
-        <!-- <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/app.css" /> -->
-    <!-- <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" /> -->
+        <link rel="stylesheet" type="text/css" href="{{ site.url }}/styles.css" />
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <!-- <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/app.css" /> -->
+    <!-- <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.url }}/feed.xml" /> -->
   </head>
 
   <body>
-        {% include index_frame.html color="#3890c7"%}
+        {% include frame.html %}
 
-        <p>site name: {{site.name}} site description:{{site.description}}</p>
-        <p>site baseurl: {{site.baseurl}}</p>
-        <p>page title: {{page.title}}</p>
     <!-- <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          <a href="{{ site.url }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
 
           <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <h1 class="site-name"><a href="{{ site.url }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
           <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
+            <a href="{{ site.url }}/">Blog</a>
+            <a href="{{ site.url }}/about">About</a>
           </nav>
         </header>
       </div>
     </div> -->
-
-        <div>
-          {{ content }}
+        <div class="row">
+            <div class="col-lg-2 
+                        d-none
+                        d-lg-block
+                "> For now empty </div>
+            <div class="col-lg-8 col-sm-12">{{content}}</div>
+            <div class="col-lg-2 
+                        d-none
+                        d-lg-block
+                ">For now empty</div>
         </div>
+
+    <!-- <div class="grid-x" style="margin-top: 50px">
+        <div class="cell large-2 medium-2 hide-for-small-only">For now empty</div>
+        <div class="cell large-8 medium-8 small-12">{{content}}</div>
+        <div class="cell large-2 medium-2 hide-for-small-only">For now empty</div>
+    </div> -->
 
     <!-- <div class="wrapper-footer">
       <div class="container">
@@ -43,6 +54,7 @@
       </div>
     </div> -->
 
-        <script src="{{site.baseurl}}/assets/js/app.js"></script>
+        <script src="{{site.baseurl}}/assets/js/jquery.min.js"></script>
+        <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
     </body>
 </html>
