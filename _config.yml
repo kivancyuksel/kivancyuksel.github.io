@@ -3,7 +3,7 @@
 name: Kıvanç Yüksel
 description: Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MKA
 site_name: Emkademy
-frame_image: /assets/img/full_width_image.jpg
+frame_image: "/assets/img/full_width_image.jpg"
 # avatar:
 host: 0.0.0.0
 
@@ -26,28 +26,28 @@ footer-links:
 collections:
     kalkulus_oncesi:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
     deneme1:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
     deneme2:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
     deneme3:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
     deneme4:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
     deneme5:
         title: Kalkülüs Öncesi
-        frame_image: /assets/img/logo_transparent_resized.png
-        category_image: /assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg
+        frame_image: "/assets/img/logo_transparent_resized.png"
+        category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
 
 
 

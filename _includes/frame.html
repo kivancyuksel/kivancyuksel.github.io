@@ -1,23 +1,34 @@
 {% include navbar.html %}
 
-{% if page.full_size %}
-<header class="full-height-image" style="background-image:url('{{site.url}}{% if collection.frame_image %}{{collection.frame_image}} {% else if site.frame_image %}{{site.frame_image}} {% else %}{{layout.frame_image}}{% endif %}')">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col-12 text-center">
-        <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: 700px; width: auto"/></a>
-      </div>
-    </div>
-  </div>
-</header>
+<!-- Frame Image -->
+{% if collection.frame_image %}
+    {% assign f_image = collection.frame_image %}
+{% else if layout.frame_image %}
+    {% assign f_image = layout.frame_image %}
 {% else %}
-<header class="half-height-image" style="background-image:url('{{site.url}}{% if page.frame_image %}{{page.frame_image}}{% else %}{{include.frame_image}}{% endif %}')">
+    {% assign f_image = site.frame_image %}
+{% endif %}
+
+<!-- Header class -->
+{% if page.frame_class %}
+    {% assign f_class = page.frame_class %}
+{% else %}
+    {% assign f_class = layout.frame_class %}
+{% endif %}
+
+<!-- Logo height -->
+{% if page.logo_height %}
+    {% assign l_height = page.logo_height %}
+{% else %}
+    {% assign l_height = layout.logo_height %}
+{% endif %}
+
+<header class="{{f_class}}" style="background-image:url('{{site.url}}{{f_image}}')">
   <div class="container h-100">
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center">
-        <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: 700px; width: auto"/></a>
+          <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: {{l_height}}; width: auto"/></a>
       </div>
     </div>
   </div>
 </header>
-{% endif %}

@@ -2,22 +2,21 @@
 layout: other
 ---
 
-<div class="grid-container fluid text-center">
-    <div class="grid-x small-up-2 medium-up-3">
-        {% for collection in site.collections %}
-            {% unless collection.label == "posts" %}
-            <a href="#">
-                <div class="cell">
+<div class="row row-cols-1 row-cols-md-3">
+    {% for collection in site.collections %}
+        {% unless collection.label == "posts" %}
+          <a href="#">
+              <div class="col mb-4">
                   <div class="card">
-                      <img src="{{site.url}}{{collection.category_image}}" style="display:block;height:auto;width:400px">
-                      <div class="card-section text-center">
-                          <h4>{{collection.title}}</h4>
+                      <img src="{{site.url}}{{collection.category_image}}" class="card-img-top" alt="...">
+                      <div class="card-body">
+                          <h5 class="card-title">{{collection.title}}</h5>
+                          <p class="card-text"></p>
                       </div>
                   </div>
-                </div>
-            </a>
-            {% endunless %}
-        {% endfor %}
-    </div>
-</div>
+              </div>
+          </a>
+        {% endunless %}
+    {% endfor %}
+</div>    
 
