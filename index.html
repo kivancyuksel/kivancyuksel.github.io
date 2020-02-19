@@ -6,15 +6,21 @@ logo_height: "700px"
 
 <div>
     {% for post in site.posts %}
-    <article>
-        <h1><a href="{{site.url}}{{post.url}}">{{post.title}}</a></h1>
-
-        <div class="entry">
-          {{ post.excerpt }}
-        </div>
-
-        <a href="{{site.url}}{{post.url}}">Devamını Gör</a>
-    </article>
+        <a href="{{site.url}}/{{post.url}}">
+            <ul class="list-unstyled">
+                <li class="media">
+                    <img src="{{site.url}}{{page.category_image}}" class="mr-3" alt="category image" style="height: 200px; width:auto">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1">{{post.title}}</h5>
+                        <p>{{post.excerpt}}</p>
+                        {% if post.tags.size > 0 %}
+                            Tag{% if post.tags.size > 1 %}s{% endif %}:
+                            {{ post.tags | sort | join: ", " }}
+                        {% endif %}
+                    </div>
+                </li>
+            </ul>
+        </a>
     {% endfor %}
 </div>
 

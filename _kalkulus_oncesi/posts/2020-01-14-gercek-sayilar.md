@@ -5,7 +5,6 @@ date: 2020-01-14T19:58:19+00:00
 author: emkademy
 layout: post
 guid: http://emkademy.local/?p=387
-permalink: /kalkulus_oncesi/gercek-sayilar/
 ocean_gallery_link_images:
   - 'off'
 ocean_sidebar:

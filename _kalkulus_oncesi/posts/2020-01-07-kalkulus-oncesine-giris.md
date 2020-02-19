@@ -5,7 +5,6 @@ date: 2020-01-07T18:58:51+00:00
 author: Kıvanc Yüksel
 layout: post
 guid: http://emkademy.local/?p=318
-permalink: /kalkulus_oncesi/kalkulus-oncesine-giris/
 image: /wp-content/uploads/2020/01/pre_calculus.jpg
 categories:
   - Kalkülüs Öncesi

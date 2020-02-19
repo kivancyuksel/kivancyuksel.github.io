@@ -5,7 +5,6 @@ date: 2020-02-01T15:01:03+00:00
 author: emkademy
 layout: post
 guid: http://emkademy.local/?p=478
-permalink: /kalkulus_oncesi/esitsizlikler/
 ocean_gallery_link_images:
   - 'off'
 ocean_sidebar:

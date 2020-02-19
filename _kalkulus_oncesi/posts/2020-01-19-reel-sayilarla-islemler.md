@@ -5,7 +5,6 @@ date: 2020-01-19T13:51:58+00:00
 author: emkademy
 layout: post
 guid: http://emkademy.local/?p=436
-permalink: /kalkulus_oncesi/reel-sayilarla-islemler/
 ocean_gallery_link_images:
   - 'off'
 ocean_sidebar:

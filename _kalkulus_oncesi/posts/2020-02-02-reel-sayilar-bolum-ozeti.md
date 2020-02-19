@@ -5,7 +5,6 @@ date: 2020-02-02T08:14:30+00:00
 author: emkademy
 layout: post
 guid: http://emkademy.local/?p=576
-permalink: /kalkulus_oncesi/reel-sayilar-bolum-ozeti/
 ocean_gallery_link_images:
   - 'on'
 ocean_sidebar:

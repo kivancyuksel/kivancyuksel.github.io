@@ -23,11 +23,21 @@ footer-links:
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "kalkulus_oncesi"
+        values:
+            category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+
 collections:
     kalkulus_oncesi:
         title: Kalkülüs Öncesi
         frame_image: "/assets/img/logo_transparent_resized.png"
         category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+        output: true
     deneme1:
         title: Kalkülüs Öncesi
         frame_image: "/assets/img/logo_transparent_resized.png"
