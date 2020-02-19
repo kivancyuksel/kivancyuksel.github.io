@@ -37,7 +37,18 @@ html {
 
 }
 
-.color-red {
-    background-color: red;
+.posts-list:hover {
+    background-color: #dce6f5 !important;
+    img {
+        opacity: 0.6;
+    }
 }
 
+
+.deneme:hover {
+    background-color: #dce6f5 !important;
+}
+
+a {
+    text-decoration: none !important;
+}

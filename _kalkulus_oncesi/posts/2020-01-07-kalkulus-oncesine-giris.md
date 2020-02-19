@@ -1,11 +1,6 @@
 ---
-id: 318
 title: Kalkülüs Öncesine Giriş
-date: 2020-01-07T18:58:51+00:00
-author: Kıvanc Yüksel
-layout: post
-guid: http://emkademy.local/?p=318
-image: /wp-content/uploads/2020/01/pre_calculus.jpg
+author: Kıvanç Yüksel
 categories:
   - Kalkülüs Öncesi
 tags:

@@ -31,6 +31,7 @@ defaults:
             type: "kalkulus_oncesi"
         values:
             category_image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+            layout: "other"
 
 collections:
     kalkulus_oncesi:

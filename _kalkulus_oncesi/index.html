@@ -2,19 +2,8 @@
 layout: other
 ---
 
+{% assign image_src = site.url | append: page.category_image %}
+{% assign image_height = "200px" %}
 
-{% for post in site.kalkulus_oncesi %}
-    {% unless post.title == "Index" %}
-    <a href="{{site.url}}/{{post.url}}">
-        <ul class="list-unstyled">
-            <li class="media">
-                <img src="{{site.url}}{{page.category_image}}" class="mr-3" alt="category image" style="height: 200px; width:auto">
-                <div class="media-body">
-                    <h5 class="mt-0 mb-1">{{post.title}}</h5>
-                    <p>{{post.excerpt}}</p>
-                </div>
-            </li>
-        </ul>
-    </a>
-    {% endunless %}
-{% endfor %}
+{% include posts_list.html all_posts=site.kalkulus_oncesi image_src=image_src image_height=image_height %}
+

@@ -1,0 +1,22 @@
+{% for post in include.all_posts %}
+    {% unless post.title == "Index" %}
+        <a href="{{site.url}}/{{post.url}}">
+            <ul class="posts-list list-unstyled bg-light text-dark border">
+                <li class="media">
+                    <img src="{{include.image_src}}" class="mr-3" alt="category image" style="height: {{include.image_height}}; width:auto">
+                    <div class="media-body">
+                        <h5 class="mt-0 mb-1 text-info">{{post.title}}</h5>
+                        <span class="text-secondary">{{post.excerpt}}</span>
+                        {% if post.tags.size > 0 %}
+                            <span class="text-success">Tag{% if post.tags.size > 1 %}s{% endif %}:</span>
+                            <span class="text-primary">{{ post.tags | sort | join: ", " }}</span>
+                        {% endif %}
+                        <p class="text-right">
+                            <span class="text-secondary text-right">{{ post.date | date_to_long_string }}</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </a>
+    {% endunless %}
+{% endfor %}
