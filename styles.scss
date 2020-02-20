@@ -2,10 +2,27 @@
 ---
 @import "variables";
 @import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "code_highlighting";
+//@import "monokai_sublime";
+//@import "tulip";
+//@import "github";
+//@import "tango";
 
 html {
-  font-size: 100%;
+    font-size: 150%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: $info;
+}
+
+h2 {
+    color: $orange;
 }
 
 .full-height-image {
@@ -45,9 +62,15 @@ html {
 }
 
 
-.deneme:hover {
-    background-color: #dce6f5 !important;
+.categories-list:hover {
+    img {
+        opacity: 0.6;
+    }
+    .div-in-category {
+        background-color: #dce6f5 !important;
+    }
 }
+
 
 a {
     text-decoration: none !important;

@@ -5,7 +5,7 @@
                 <li class="media">
                     <img src="{{include.image_src}}" class="mr-3" alt="category image" style="height: {{include.image_height}}; width:auto">
                     <div class="media-body">
-                        <h5 class="mt-0 mb-1 text-info">{{post.title}}</h5>
+                        <h3 class="mt-0 mb-1 text-info">{{post.title}}</h3>
                         <span class="text-secondary">{{post.excerpt}}</span>
                         {% if post.tags.size > 0 %}
                             <span class="text-success">Tag{% if post.tags.size > 1 %}s{% endif %}:</span>
