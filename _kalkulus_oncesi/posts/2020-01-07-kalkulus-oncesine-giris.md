@@ -26,7 +26,7 @@ Bu seçeneklerden hangisini seçerseniz seçin, ilk olarak bir programlama dilin
 
 Bunlardan ilkini seçerseniz eğer, çok daha hızlı bir şekilde ilerleyebilirsiniz. Birkaç ay içerisinde bu konularda projeler yapmaya başlayabilirsiniz. Bunun sebebi, yazılım (software) sektörünün bu konularda çok gelişmiş olmasından dolayı bir çok işlemi farklı kütüphaneler kullanarak sadece birkaç satır kodla, bu kodun içeriğini anlamadan yapabiliyor olmanızdır. Buna bir örnek vermek gerekirse (bu örneği şu anda kesinlikle anlamak zorunda değilsiniz. Sadece, birkaç satır kodla hemen başlayabileceğinizi göstermek istedim):
 
-```python
+{% highlight python linenos %}
 from sklearn import svm
 
 digits = datasets.load_digits()
@@ -34,7 +34,7 @@ digits = datasets.load_digits()
 classifier = svm.SVC(gamma=0.001, C=100.)
 classifier.fit(digits.data[:-1], digits.target[:-1])
 classifier.predict(digits.data[-1:])
-```
+{% endhighlight %}
 
 Evet, şu anda numaraları tanıyabilen bi model eğitmiş oldunuz&#8230;
 

@@ -5,7 +5,9 @@ description: Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MK
 site_name: Emkademy
 frame_image: "/assets/img/full_width_image.jpg"
 # avatar:
-host: 0.0.0.0
+
+plugins:
+    - jemoji
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -51,6 +53,7 @@ defaults:
 collections:
     kalkulus_oncesi:
         title: Kalkülüs Öncesi
+        permalink: /:collection/:title
         image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
         output: true
 

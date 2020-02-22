@@ -31,11 +31,11 @@
                 {% assign collection_index_url = "/" | append: page.collection | append: "/index.html" %}
                 {% if collection_index_url == page.url %}
                     <div class="bg-dark">
-                        <h1 class="text-info">{{page.collection_label}}</h1>
+                        <h1 class="text-warning">{{page.collection_label}}</h1>
                     </div>
                 {% elsif layout.display_center_title == "true" %}
                     <div class="bg-dark">
-                        <h1 class="text-info">{{page.title}}</h1>
+                        <h1 class="text-warning">{{page.title}}</h1>
                     </div>
                 {% else %}
                     <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: {{l_height}}; width: auto"/></a>
