@@ -2,8 +2,12 @@
 
 name: Kıvanç Yüksel
 description: Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MKA
+site_name: Emkademy
+frame_image: "/assets/img/full_width_image.jpg"
 # avatar:
 
+plugins:
+    - jemoji
 
 # Includes an icon in the footer for each username you enter
 footer-links:
@@ -22,6 +26,38 @@ footer-links:
   googleplus: # anything in your profile username that comes after plus.google.com/
 
 
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "kalkulus_oncesi"
+        values:
+            image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+            collection_label: "Kalkulüs Öncesi"
+            layout: "post"
+
+collections:
+    kalkulus_oncesi:
+        title: Kalkülüs Öncesi
+        permalink: /:collection/:title
+        image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+        output: true
+
+
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
@@ -35,7 +71,11 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed
+  style: compressed
+  load_paths:
+      - _sass
+      - bootstrap_scss
+
 
 # Use the following plug-ins
 gems:

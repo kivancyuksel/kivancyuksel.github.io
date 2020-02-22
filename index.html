@@ -1,0 +1,21 @@
+---
+layout: default
+frame_class: "full-height-image"
+logo_height: "700px"
+---
+
+{% assign all_posts = '' | split: '' %}
+{% for collection in site.collections %}
+    {% assign name = collection.label %}
+    {% assign all_posts = all_posts | concat: site[name] %}
+{% endfor %}
+
+{% assign image_src = site.url | append: "/assets/img/blog.png" %}
+{% assign image_height = "100px" %}
+
+{% include posts_list.html all_posts=all_posts image_src=image_src image_height=image_height %}
+
+{% include footer.html %}
+
+
+

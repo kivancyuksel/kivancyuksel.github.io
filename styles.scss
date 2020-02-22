@@ -1,0 +1,98 @@
+---
+---
+@import "code_highlighting";
+@import "variables";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+//@import "monokai_sublime";
+//@import "tulip";
+//@import "github";
+//@import "tango";
+
+html {
+    font-size: 150%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: $warning;
+}
+
+h2 {
+    color: $green;
+}
+
+h3 {
+    color: $info;
+}
+
+.full-height-image {
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.half-height-image {
+  height: 50vh;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.full-height-image {
+    //background-image: url($full_width_image);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.half-height-image {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.posts-list:hover {
+    background-color: #dce6f5 !important;
+    img {
+        opacity: 0.6;
+    }
+}
+
+
+.categories-list:hover {
+    img {
+        opacity: 0.6;
+    }
+    .div-in-category {
+        background-color: #dce6f5 !important;
+    }
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+
+.jumbo-styles {
+    //background-color: rgba(221, 113, 12, 0.77);
+    background-color: rgba(255, 137, 20, 0.2);
+    p {
+       color: black; 
+       font-style: italic;
+    }
+}
+
+
+.show-my-image {
+    p {
+        font-size: 80%;
+    }
+}
