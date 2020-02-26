@@ -1,0 +1,51 @@
+{% for post in include.all_posts %}
+    {% unless post.title == "Index" %}
+
+        {% if include.image_src.first %}
+            {% assign current_image_src = include.image_src[forloop.index0]}
+        {% else %}
+            {% assign current_image_src = include.image_src %}
+        {% endif %}
+        
+            <div class="card card-cascade mt-3">
+                <div class="view view-cascade overlay">
+                <img class="card-img-top" src="{{current_image_src}}" alt="Kategori fotoğrafı">
+                        <a href="{{site.url}}/{{post.url}}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                </div>
+
+                <div class="card-body card-body-cascade text-center">
+                    <h4 class="card-title"><strong>{{post.title}}</strong></h4>
+                    <p class="card-text">{{post.excerpt}}</p>
+                    <a class="btn aqua-gradient btn-sm">Daha fazla gör</a>
+
+                </div>
+
+                <div class="card-footer text-muted text-center">
+                    Yazılma tarihi: {{post.date | date: "%d/%m/%Y"}}
+                </div>
+
+            </div>
+
+        <!-- <a href="{{site.url}}/{{post.url}}">
+            <ul class="posts-list list-unstyled bg-light text-dark border">
+                <li class="media">
+
+                    <img src="{{current_image_src}}" class="mr-3" alt="category image" style="height: {{include.image_height}}; width:auto">
+                    <div class="media-body">
+                        <h3 class="mt-0 mb-1 text-info">{{post.title}}</h3>
+                        <span class="text-secondary">{{post.excerpt}}</span>
+                        {% if post.tags.size > 0 %}
+                            <span class="text-success">Tag{% if post.tags.size > 1 %}s{% endif %}:</span>
+                            <span class="text-primary">{{ post.tags | sort | join: ", " }}</span>
+                        {% endif %}
+                        <p class="text-right">
+                            <span class="text-secondary text-right">{{ post.date | date_to_long_string }}</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </a> -->
+    {% endunless %}
+{% endfor %}

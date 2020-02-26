@@ -1,13 +1,45 @@
-{% if site.footer-links.dribbble %}<a href="https://dribbble.com/{{ site.footer-links.dribbble }}"><i class="svg-icon dribbble"></i></a>{% endif %}
-{% if site.footer-links.email %}<a href="mailto:{{ site.footer-links.email }}"><i class="svg-icon email"></i></a>{% endif %}
-{% if site.footer-links.facebook %}<a href="https://www.facebook.com/{{ site.footer-links.facebook }}"><i class="svg-icon facebook"></i></a>{% endif %}
-{% if site.footer-links.flickr %}<a href="https://www.flickr.com/{{ site.footer-links.flickr }}"><i class="svg-icon flickr"></i></a>{% endif %}
-{% if site.footer-links.github %}<a href="https://github.com/{{ site.footer-links.github }}"><i class="svg-icon github"></i></a>{% endif %}
-{% if site.footer-links.instagram %}<a href="https://instagram.com/{{ site.footer-links.instagram }}"><i class="svg-icon instagram"></i></a>{% endif %}
-{% if site.footer-links.linkedin %}<a href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}"><i class="svg-icon linkedin"></i></a>{% endif %}
-{% if site.footer-links.pinterest %}<a href="https://www.pinterest.com/{{ site.footer-links.pinterest }}"><i class="svg-icon pinterest"></i></a>{% endif %}
-{% if site.footer-links.rss %}<a href="{{ site.baseurl }}/feed.xml"><i class="svg-icon rss"></i></a>{% endif %}
-{% if site.footer-links.twitter %}<a href="https://www.twitter.com/{{ site.footer-links.twitter }}"><i class="svg-icon twitter"></i></a>{% endif %}
-{% if site.footer-links.stackoverflow %}<a href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}"><i class="svg-icon stackoverflow"></i></a>{% endif %}
-{% if site.footer-links.youtube %}<a href="https://youtube.com/{{ site.footer-links.youtube }}"><i class="svg-icon youtube"></i></a>{% endif %}
-{% if site.footer-links.googleplus %}<a href="https://plus.google.com/{{ site.footer-links.googleplus }}"><i class="svg-icon googleplus"></i></a>{% endif %}
+<!--Facebook-->
+{% if site.footer-links.facebook %}
+<a class="btn-floating btn-lg btn-fb" 
+   href="https://www.facebook.com/{{ site.footer-links.facebook }}" 
+   target="_blank" rel="noopener noreferrer"
+   type="button" role="button"><i class="fab fa-facebook-f"></i></a>
+{% endif %}
+
+<!--Twitter-->
+{% if site.footer-links.twitter %}
+<a class="btn-floating btn-lg btn-tw" 
+   href="https://www.twitter.com/{{ site.footer-links.twitter }}" 
+   target="_blank" rel="noopener noreferrer" 
+   type="button" role="button"><i class="fab fa-twitter"></i></a>
+{% endif %}
+
+<!--Linkedin-->
+{% if site.footer-links.linkedin %}
+<a class="btn-floating btn-lg btn-li" 
+   href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}" 
+   target="_blank" rel="noopener noreferrer" 
+   type="button" role="button"><i class="fab fa-linkedin-in"></i></a>
+{% endif %}
+
+<!--Instagram-->
+{% if site.footer-links.instagram %}
+<a class="btn-floating btn-lg btn-ins" 
+   href="https://instagram.com/{{ site.footer-links.instagram }}" 
+   target="_blank" rel="noopener noreferrer" 
+   type="button" role="button"><i class="fab fa-instagram"></i></a>
+{% endif %}
+<!--Youtube-->
+{% if site.footer-links.youtube %}
+<a class="btn-floating btn-lg btn-yt" 
+   href="https://youtube.com/{{ site.footer-links.youtube }}" 
+   target="_blank" rel="noopener noreferrer"
+   type="button" role="button"><i class="fab fa-youtube"></i></a>
+{% endif %}
+<!--Github-->
+{% if site.footer-links.github %}
+<a class="btn-floating btn-lg btn-git" 
+   href="https://github.com/{{ site.footer-links.github }}" 
+   target="_blank" rel="noopener noreferrer"
+   type="button" role="button"><i class="fab fa-github"></i></a>
+{% endif %}

@@ -5,17 +5,25 @@ logo_height: "700px"
 ---
 
 {% assign all_posts = '' | split: '' %}
+{% assign collection_images = "" %}
 {% for collection in site.collections %}
     {% assign name = collection.label %}
     {% assign all_posts = all_posts | concat: site[name] %}
+
+    {% if collection.image %}
+        {% assign collection_images = collection_images | join: "," | append: "," | append: collection.image | split: "," %}
+    {% else %}
+        {% assign collection_images = collection_images | join: "," | append: "," | append: "/assets/img/blog.png" | split: "," %}
+    {% endif %}
 {% endfor %}
 
+
+
 {% assign image_src = site.url | append: "/assets/img/blog.png" %}
-{% assign image_height = "100px" %}
+{% assign image_height = "500px" %}
 
-{% include posts_list.html all_posts=all_posts image_src=image_src image_height=image_height %}
+{% include posts_list.html all_posts=all_posts image_src=collection_images image_height=image_height %}
 
-{% include footer.html %}
 
 
 

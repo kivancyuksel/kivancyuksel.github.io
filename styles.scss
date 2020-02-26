@@ -2,8 +2,8 @@
 ---
 @import "code_highlighting";
 @import "variables";
-@import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "mdb-free";
+@import url('https://fonts.googleapis.com/css?family=Poppins:600&display=swap');
 //@import "monokai_sublime";
 //@import "tulip";
 //@import "github";
@@ -14,7 +14,9 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
+    color: #606060 !important;
+    line-height: 1.8 !important;
 }
 
 h1 {
@@ -63,6 +65,16 @@ h3 {
     img {
         opacity: 0.6;
     }
+}
+
+.post-info {
+    i {
+       font-size: 60%;
+   }
+}
+
+.side-posts {
+    font-size : 60%;
 }
 
 
