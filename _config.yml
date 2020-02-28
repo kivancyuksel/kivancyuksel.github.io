@@ -24,6 +24,10 @@ collections:
         permalink: /:collection/:title
         image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
         output: true
+    research:
+        title: Research
+        permalink: /:collection/:title
+        output: true
 
 plugins:
     - jemoji
