@@ -1,18 +1,21 @@
+{% assign include_image_src = include.image_src %}
+
 {% for post in include.all_posts %}
     {% unless post.title == "Index" %}
-
-        {% if include.image_src.first %}
-            {% assign current_image_src = include.image_src[forloop.index0]}
+        {% if include_image_src.first %}
+            {% assign current_image_src = include_image_src[forloop.index0] %}
         {% else %}
-            {% assign current_image_src = include.image_src %}
+            {% assign current_image_src = include_image_src %}
         {% endif %}
-
-        {% assign href_url = {{site.url}} | append: "/" | append: {{post.url}} %}
         
-            <div class="card card-cascade mt-3">
+        {% assign href_url = {{site.url}} | append: {{post.url}} %}
+
+        <div class="col-lg-11 lg-ml-5">
+            <div class="card card-cascade">
                 <div class="view overlay zoom">
                     <div class="view view-cascade overlay">
-                        <img class="card-img-top" src="{{current_image_src}}" alt="Kategori fotoğrafı">
+                        <img class="card-img-top img-fluid" src="{{current_image_src}}" alt="Kategori fotoğrafı"
+                             style="height: 40vh">
                         <a href="{{href_url}}"> <div class="mask rgba-white-slight"></div> </a>
                 </div>
             </div>
@@ -25,12 +28,14 @@
                     <i class="far fa-user"> {{post.author}}</i> &nbsp;
                     <i class="far fa-clock"> {{post.date | date: "%d/%m/%Y"}} </i> &nbsp;
                     <i class="far fa-folder"> {{post.categories}}</i>
-
-                    <p class="card-text">{{post.excerpt}}</p>
+            
+                    <h6 class="card-text">{{post.excerpt}}</p>
                     <a class="btn blue-gradient btn-sm" href="{{href_url}}">Okumaya devam et</a>
                 </div>
             
             </div>
             <hr>
+            
+        </div>
     {% endunless %}
 {% endfor %}

@@ -1,12 +1,25 @@
+{% assign all_posts = '' | split: '' %}
+{% for collection in site.collections %}
+    {% assign name = collection.label %}
+    {% unless name == "posts" %}
+        {% assign all_posts = all_posts | concat: site[name] %}
+    {% endunless %}
+{% endfor %}
+
+{% assign all_posts = all_posts | reverse %}
+
 
 <div class="col-lg-7 side-posts">
     <p class="border-left border-primary right-column-title"> &nbsp; Yakın Zamanda Yayınlananlar</p>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Morbi leo risus</li>
-      <li class="list-group-item">Porta ac consectetur ac</li>
-      <li class="list-group-item">Vestibulum at eros</li>
+        {% for i in (0.. 5) %}
+            {% assign post = all_posts[i] %}
+            {% unless post.title == "Index" %}
+                <a href="{{site.url}}{{post.url}}">
+                    <li class="list-group-item">{{post.title}}</li>
+                </a>
+            {% endunless %}
+        {% endfor %}
     </ul>
 </div>
 

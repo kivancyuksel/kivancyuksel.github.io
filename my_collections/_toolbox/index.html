@@ -1,0 +1,8 @@
+---
+layout: default
+index_title: Toolbox
+---
+
+{% assign all_posts = site[page.collection] | reverse %}
+{% include posts_list.html all_posts=all_posts image_src=page.image %}
+

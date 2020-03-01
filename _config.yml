@@ -1,47 +1,79 @@
 # theme: jekyll-theme-cayman
 
 url: https://emkademy.com
-name: Kıvanç Yüksel
-description: Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MKA
+author: Kıvanç Yüksel
+title: Emkademy blog
+motto: "Yerinde duran, geriye gidiyor demektir... İleri, daima ileri! - MKA"
+description: "Interests of a Computer Scientist"
 site_name: Emkademy
 frame_image: "/assets/img/full_width_image.jpg"
 host: 0.0.0.0
 # avatar:
 
+_: &kalkulus_oncesi_image "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+_: &kalkulus_oncesi_title "Kalkülüs Öncesi"
+_: &toolbox_image "/assets/img/toolbox/toolbox.jpg"
+_: &toolbox_title "Toolbox"
+_: &general_image "/assets/img/full_width_image.jpg"
+
+
 defaults:
+    - 
+        scope:
+            path: ""
+        values:
+            image: *general_image
+            comments: true
     -
         scope:
             path: ""
             type: "kalkulus_oncesi"
         values:
-            image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
-            collection_label: "Kalkulüs Öncesi"
             layout: "post"
+            image: *kalkulus_oncesi_image
+    -
+        scope:
+            path: ""
+            type: "toolbox"
+        values:
+            layout: "post"
+            image: *toolbox_image
 
+
+collections_dir: my_collections
 collections:
     kalkulus_oncesi:
-        title: Kalkülüs Öncesi
-        permalink: /:collection/:title
-        image: "/assets/img/kalkulus_oncesi/kalkulus_oncesi.jpg"
+        title: *kalkulus_oncesi_title
+        image: *kalkulus_oncesi_image
+        short_desc: "bla bla"
+        group: "teorik_altyapi"
+        permalink: /teorik_altyapi/:collection/:name
         output: true
-    research:
-        title: Research
-        permalink: /:collection/:title
+
+    toolbox:
+        title: *toolbox_title
+        image: *toolbox_image
+        short_desc: "bla bla"
+        group: "research"
+        permalink: /research/:collection/:name
         output: true
+
+# algolia:
+#   application_id: H33RL6BBPY
+#   index_name:     emkademy
+#   search_only_api_key: 2a2524980c465230715bba7cfc766e08
 
 plugins:
     - jemoji
+    - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
 
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: compressed
   load_paths:
       - _sass
-      - mdb
+      - mdb_sass
 
 # Includes an icon in the footer for each username you enter
 footer-links:

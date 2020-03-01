@@ -1,44 +1,14 @@
 {% include navbar.html %}
-
-<!-- Frame Image -->
-{% if page.image %}
-    {% assign f_image = page.image %}
-{% elsif layout.frame_image %}
-    {% assign f_image = layout.frame_image %}
-{% else %}
-    {% assign f_image = site.frame_image %}
-{% endif %}
-
-<!-- Header class -->
-{% if page.frame_class %}
-    {% assign f_class = page.frame_class %}
-{% else %}
-    {% assign f_class = layout.frame_class %}
-{% endif %}
-
-<!-- Logo height -->
-{% if page.logo_height %}
-    {% assign l_height = page.logo_height %}
-{% else %}
-    {% assign l_height = layout.logo_height %}
-{% endif %}
-
-
-<header class="{{f_class}}" style="background-image:url('{{site.url}}{{f_image}}')">
+<header class="half-height-image" style="background-image:url('{{site.url}}{{page.image}}')">
     <div class="container h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12 text-center">
-                {% assign collection_index_url = "/" | append: page.collection | append: "/index.html" %}
-                {% if collection_index_url == page.url %}
-                    <div class="bg-dark">
-                        <h1 class="text-warning">{{page.collection_label}}</h1>
-                    </div>
-                {% elsif layout.display_center_title == "true" %}
-                    <div class="bg-dark">
-                        <h1 class="text-warning">{{page.title}}</h1>
-                    </div>
+                {% if page.frame_image %}
+                    <a href="{{site.url}}"><img class="img-fluid" src="{{page.frame_image}}"/></a>
                 {% else %}
-                    <a href="{{site.url}}"><img src="/assets/img/logo_transparent_damla.png" style="height: {{l_height}}; width: auto"/></a>
+                    <div class="bg-dark">
+                        <h1 class="text-warning">{% if page.title != "Index" %}{{page.title}}{% else %}{{page.index_title}}{% endif %}</h1>
+                    </div>
                 {% endif %}
             </div>
         </div>
