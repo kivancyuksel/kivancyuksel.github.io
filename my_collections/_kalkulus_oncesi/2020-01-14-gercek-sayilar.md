@@ -95,7 +95,7 @@ Doğrunun üzerinde 0 yazdığınız yerin sağında herhangi bir nokta daha se�
 Şu anda bu doğru üzerindeki 1 birimin ne kadar olduğuna karar vermiş oldunuz.
 
 <div class="text-center">
-  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/dogrunun_uzerinde_2_nokta.png" class="rounded" alt="doğrunun üzerinde iki nokta">
+  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/dogrunun_uzerinde_2_nokta.png" class="img-fluid" alt="doğrunun üzerinde iki nokta">
 </div>
 
 Bu 2 noktayı seçtikten sonra, bundan sonra bu doğrunun üzerine koyacağınız her bir sayıyı bu 2 nokta arasındaki mesafeyi 1 birim 
@@ -105,7 +105,7 @@ Aynı şekilde $\frac{1}{n}$ rasyonel sayısı, 0 ile 1 in arasını $n$ eşit b
 Bu şekilde devam ederek $\frac{2}{n}$ sayısını $\frac{1}{n}$ sayısının sağına aynı miktarda gidilerek yerleştirilebilir:
 
 <div class="text-center">
-  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/dogrunun_uzerinde_n_nokta.png" class="rounded" alt="doğrunun üzerinde n nokta">
+  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/dogrunun_uzerinde_n_nokta.png" class="img-fluid" alt="doğrunun üzerinde n nokta">
 </div>
 
 Eğer bu doğrunun üzerinde hiç boşluk yoksa, yani akla gelebilecek bütün sayılar bu doğrunun üzerine yazıldığı zaman bu doğru 
@@ -123,13 +123,13 @@ dik açının karşısındaki kenarın uzunluğunun karesine eşittir. Yani;
 
 
 <div class="text-center">
-  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/pisagor_teoremi.png" class="rounded" alt="pisagor teoremi">
+  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/pisagor_teoremi.png" class="img-fluid" alt="pisagor teoremi">
 </div>
 
 Bu teoremi temel alarak aşağıdaki üçgenin dik açısının karşısındaki kenarın uzunluğunu hesaplayalım;
 
 <div class="text-center">
-  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/pisagor_teoremi_ornek.png" class="rounded" alt="pisagor teoremi ornek">
+  <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/pisagor_teoremi_ornek.png" class="img-fluid" alt="pisagor teoremi ornek">
 </div>
 
 Eee tamam işte nolduki yani? 🙂 Diye soruyorsanız eğer daha önce bahsettiğimiz kuralı hatırlayalım: 

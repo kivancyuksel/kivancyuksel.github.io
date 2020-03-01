@@ -147,7 +147,7 @@ $$ Eğer \ \ a < b \ \ ve \ \ b < c \ \ ise, \ o \ zaman \ \ a < c \ dir.$$
 Bu ifadenin neden doğru olduğunu görmek için reel doğruya bir daha bakalım.
 
 <div class="text-center show-my-image">
-    <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/a_b_c_dogrusu.png" alt="a < b < c doğrusu"/>
+    <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/a_b_c_dogrusu.png" class="img-fluid" alt="a < b < c doğrusu"/>
     <p>Geçişlilik: $a<b$ ve $b<c$ ise $a<c$ 'dir</p>
 </div>
 
@@ -353,7 +353,7 @@ bulunan nesnelerden oluşur. Bunu bir örnekle gösterelim:
 
 
 <div class="text-center show-my-image">
-    <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/union.png" alt="Doğru üzerinde union örneği"/>
+    <img src="{{site.url}}/assets/img/kalkulus_oncesi/reel_sayilar/union.png" class="img-fluid" alt="Doğru üzerinde union örneği"/>
     <p>üstte &nbsp; $(2, 6)$ &nbsp;, altta &nbsp; $(3, 8]$ &nbsp;</p>
 </div>    
 

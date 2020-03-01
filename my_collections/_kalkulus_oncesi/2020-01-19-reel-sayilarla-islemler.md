@@ -7,7 +7,7 @@ tags:
   - kalkülüs öncesi
   - matematik
   - python
-excerpt: Rasyonel sayılarda olduğu gibi, reel sayılara da uygulanan dört işlemin sonucunda yine bir reel sayı elde edilir (0 ile bölümün dışında). 
+excerpt: Rasyonel sayılarda olduğu gibi, reel sayılara da uygulanan dört işlemin sonucunda yine bir reel sayı elde edilir (0 ile bölümün dışında).
     Bu bölümde ileride işinize yarayacak ve bu sebepten dolayı iyice öğrenmeniz gereken reel sayılara ait bazı özellikleri göreceğiz. 
 ---
 
@@ -291,7 +291,7 @@ $$\frac{-a}{-b} = \frac{a}{b}$$
 <span class="badge badge-primary">Not: </span> Yukarıdaki ifadeleri Python&#8217;da deneyip 
 sonuçlarına bakabilirsiniz.
 
-{% highlight python linenos %}
+```python
 from math import isclose
 
 a = 5
@@ -324,7 +324,7 @@ dogru_mu_yanlis_mi(ifade3)
 dogru_mu_yanlis_mi(ifade4)
 dogru_mu_yanlis_mi(ifade5)
 dogru_mu_yanlis_mi(ifade6)
-{% endhighlight %}
+```
 
-Evet bu derslikte bu kadar :blush: . Bir sonraki derste matematikteki "eşitsizlikler" konusu hakkında
+Evet bu derslikte bu kadar :) . Bir sonraki derste matematikteki "eşitsizlikler" konusu hakkında
 konuşacağız...
