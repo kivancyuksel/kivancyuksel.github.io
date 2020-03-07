@@ -1,0 +1,17 @@
+<!-- Collapse buttons -->
+<div class="my-collapse">
+    <a class="btn btn-primary" data-toggle="collapse" href="#{{include.collapse-unique-id}}" aria-expanded="false"
+        aria-controls="{{include.collapse-unique-id}}">
+        {{include.collapse-btn-title}}
+  </a>
+</div>
+<!-- / Collapse buttons -->
+
+<!-- Collapsible element -->
+<div class="collapse my-collapse-content" id="{{include.collapse-unique-id}}">
+  <div class="mt-3">
+      {{include.collapse-content}}
+  </div>
+</div>
+<!-- / Collapsible element -->
+
