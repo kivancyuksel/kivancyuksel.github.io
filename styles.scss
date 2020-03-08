@@ -31,6 +31,25 @@ h3 {
     color: $info;
 }
 
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-spacing: 5px;
+    border: 2px solid;
+}
+
+th {
+    color: #3f729b;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+td {
+    border: 2px solid;
+    padding: 5px;
+}
+
+
 
 .half-height-image {
   height: 50vh;
@@ -109,7 +128,7 @@ a {
 .jumbo-styles {
     //background-color: rgba(221, 113, 12, 0.77);
     background-color: rgba(255, 137, 20, 0.2);
-    p {
+    p, li {
        color: black; 
        font-style: italic;
     }

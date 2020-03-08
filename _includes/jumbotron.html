@@ -1,6 +1,6 @@
 
 <div class="jumbotron jumbotron-fluid border border-info jumbo-styles">
-  <div class="container text-center">
+    <div class="container {% if include.left %}text-left{% else %}text-center{% endif %}">
       {{include.content}}
   </div>
 </div>
