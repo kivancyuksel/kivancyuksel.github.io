@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 'Accuracy, Precision, Recall, F1 Score and ROC curve'
-excerpt: In this post we discuss about some other metrics that can be used for classification problems instead of accuracy. By real world examples, it is shown how crucial it is to think very carefully before choosing a metric to use.
-    Because wrongly chosen metric can potentially fool you to believe that your model is very good when in reality it is not.
+excerpt: In this post, we discuss some other metrics that can be used for classification problems instead of accuracy. By real-world examples, it is shown how crucial it is to think very carefully before choosing a metric to use.
+    Because wrongly chosen metrics can potentially fool you to believe that your model is very good when in reality it is not.
 
 tags: 
     - machine learning
@@ -27,8 +27,8 @@ date: 2019-06-25 13:14:15
 <li> understand the difference between accuracy, precision, recall and F1 score and be able to choose the right metric for your needs,</li>
 <li> be able to use Receiver Operating Characteristic (ROC) curve and Area Under the Curve (AUC) to make decisions about: </li>
     <ul>
-	<li> which threshold (to classify a sample as positive) is better for your model, </li>
-	<li> among all of the models you trained, which one is actually the best.</li>
+    <li> which threshold (to classify a sample as positive) is better for your model, </li>
+    <li> among all of the models you trained, which one is actually the best.</li>
     </ul>
 </ul>
 
@@ -39,15 +39,15 @@ date: 2019-06-25 13:14:15
 
 ---
 
-One of the most important decisions that has to be made before starting a Machine Learning project is to decide which metric to use. 
-It is so crucial, in a sense that wrong metric can potentially trick you to believe that your model is good, or getting better, when in reality it is not.
+One of the most important decisions that have to be made before starting a Machine Learning project is to decide which metric to use. 
+It is so crucial, in a sense that the wrong metric can potentially trick you to believe that your model is good, or getting better when in reality it is not.
 
 I have a feeling that *accuracy* sometimes might be considered as "one metric to rule them all". However, this is not the case. 
 One should choose which metric to use based on needs. What is trying to be achieved? What is the output of the model? 
 What is the impact of your model to say that something belongs to some particular class (what is the consequence of this decision)? What about your data? What kind of it do you have? These are some essential questions that one should consider before doing anything else.
 
 This post introduces four metrics, namely: *accuracy, precision, recall, and f1 score*. None of these metrics are better, 
-or worse then the other. The point here is to choose the right one for the problem you are trying to solve. Alright, let's get started then... :)
+or worse than the other. The point here is to choose the right one for the problem you are trying to solve. Alright, let's get started then... :)
 
 To understand these metrics easier, I am going to use a tool called **Confusion Matrix**. It is simply a graph that shows us our model's performance.
 For example, let's say that our model classifies emotions based on a face image. Our confusion matrix could look something like this:
@@ -123,7 +123,7 @@ plot_confusion_matrix(confusion_matrix, class_names)
 
 
 Columns of this graph show us how many samples a particular class has ( in this case, we have: *happy=33, angry=29, sad=38* ), and rows show our model's predictions.
-For example, we have 33 samples for the *happy* class, however our model predicted *happy=12, sad=15, angry=6*. If we had all of the entries of this matrix on its diagonal, we would have a perfect model.
+For example, we have 33 samples for the *happy* class, however, our model predicted *happy=12, sad=15, angry=6*. If we had all of the entries of this matrix on its diagonal, we would have a perfect model.
 
 Now that we know how confusion matrix works, let's come back to the main topic of this post. Imagine, our model's predictions are as shown on the confusion matrix below,
 
@@ -134,11 +134,10 @@ Now that we know how confusion matrix works, let's come back to the main topic o
 </div>    
 
 
-Well, you need to be very careful now... If you didn't think carefully before you choose the metric you used, and directly picked accuracy as your metric, you might fool yourself to believing that your model is amazing. Look, it has a 99% accuracy! But... There are a number of 
-problems here. The first, and probably the most obvious, one is: the data is imbalanced. Your model can easly learn to output a single label no matter what its input is, and still have a very high accuracy. There are different methods you can use to solve this particular problem,
+Well, you need to be very careful now... If you didn't think carefully before you choose the metric you used, and directly picked accuracy as your metric, you might fool yourself to believing that your model is amazing. Look, it has a 99% accuracy! But... There are a number of problems here. The first, and probably the most obvious, one is: the data is imbalanced. Your model can easily learn to output a single label no matter what its input is and still have very high accuracy. There are different methods you can use to solve this particular problem,
 and one of them is to choose a different metric then accuracy ( since this post is not specifically about this problem, I don't mention the other methods here ).
 
-Another problem is: have you actually thought about how important is your model's decision? What impact it has in the real life? For example, what if your model predicts whether a person has cancer? or what if it predicts if a person is a terorist? ( From the confusion matrix above )
+Another problem is: have you actually thought about how important is your model's decision? What impact it has in real life? For example, what if your model predicts whether a person has cancer? or what if it predicts if a person is a terrorist? ( From the confusion matrix above )
 That 2 times your model predicted wrong could potentially change somebody's life drastically. In one of those cases, there is an individual who is not a terrorist, but your model says that s/he is. Furthermore, although your model's accuracy is 99%, it wasn't able to detect any
 terrorist, even though there is one. Or, if this was a model which is used to classify if a patient has an infectious virus, what do you think the consequence would be when our model says with 99% confidence that a person doesn't have a virus when in reality s/he has? 
 
@@ -147,9 +146,9 @@ To deal with these problems, let's check some other metrics than accuracy.
 ## Precision 
 Let's start with the mathematical formula of precision:
 
-$$precision = \frac{\text{True Positives}}{\text{True Positives + False Positives}}$$
+$$precision = \frac{True \ Positives}{True \ Positives + False \ Positives}$$
 
-Let's think about this equation a little bit. What benefit we get using precision as our metric? 
+Let's think about this equation a little bit. What benefit do we get using precision as our metric? 
 
 As long as there are no *False Positives* your model's accuracy is $1$ (assuming *True Positives $\geq$ 0*). 
 The moment you start having some *False Positives*, the precision starts decreasing. We had 99% accuracy on 
@@ -158,9 +157,8 @@ above example, let's check what precision we have:
 $$precision = \frac{0}{0+1} = 0.0$$
 
 Now we are getting somewhere. So, based on precision, our model is not that good after all... But, when to use precision? If the number of 
-*False Positives* are crucial to you, then you should use precision. For example, if your model predicts
- whether an email is a spam, you would be very concerned with the number of *False Positives* you have. 
- Because a *False Positive* would mean that an email is a spam, and may be a user would miss a very 
+*False Positives* are crucial to you, then you should use precision. For example, if your model predicts whether an email is a spam, you would be very concerned with the number of *False Positives* you have. 
+ Because a *False Positive* would mean that an email is spam, and maybe a user would miss a very 
  important email because of that decision.
 
 {% capture jumbotron-content %}
@@ -175,16 +173,14 @@ Now we are getting somewhere. So, based on precision, our model is not that good
 ## Recall
 What about recall then? Again, let's check the equation:
 
-$$recall = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}$$
+$$recall = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
 
-This time, as long as there are no *False Negatives*, we are home. Whenever the cost of having *False Negatives*
- is too high, may be you should consider using recall as your metric. As an example, we can think of a model that 
- predicts if a patient has an infectious virus. When we have a *False Negative*, we say, okay, this patient doesn't have a virus, when in reality s/he has and
-  the cost of having a *False Positive* is more people infected by the disease. 
+This time, as long as there is no *False Negative*, we are home. Whenever the cost of having *False Negatives*
+ is too high, maybe you should consider using recall as your metric. As an example, we can think of a model that predicts if a patient has an infectious virus. When we have a *False Negative*, we say, okay, this patient doesn't have a virus, when in reality s/he has and the cost of having a *False Positive* is more people infected by the disease. 
 
 {% capture jumbotron-content %}
 <h3>When to use recall?</h3>
-<p class="lead">Recall punishes false negatives, hence it could be the metric of choice when the thing you care the most is false negatives your model make, and you don't worry to much about false positives.</p>
+<p class="lead">Recall punishes false negatives, hence it could be the metric of choice when the thing you care the most is false negatives your model make, and you don't worry too much about false positives.</p>
 {% endcapture %}
 
 {% capture jumbotron-include %}{% include jumbotron.html content=jumbotron-content %}{% endcapture %}
@@ -194,14 +190,14 @@ This time, as long as there are no *False Negatives*, we are home. Whenever the 
 
 Before we delve into *F1 Score's* equation, I would like you to imagine a situation where things can go wrong, let's look at *recall's* equation again:
 
-$$recall=\frac{\text{True Positives}}{\text{True Positives + False Negatives}}$$
+$$recall=\frac{True \ Positives}{True \ Positives + False \ Negatives}$$
 
-What could possible go wrong here? Well, considering the classification problem we discussed earlier; what happens if we classify everyone as a terrorist? Let's see:
+What could possibly go wrong here? Well, considering the classification problem we discussed earlier; what happens if we classify everyone as a terrorist? Let's see:
 
 $$recall = \frac{1}{1+0} = 1$$
 
-As you can see, even though our model has very little value in reality (because we classify everybody as terrorist!), it has a perfect *recall* score. Of course, there is a reverse proportion in between *precision* and *recall*, when we increase *recall* we decrease *precision*.
-But, do we need to keep track both of these metrics when both are important to us? The answer is no, because we have *F1 Score* to do that for us. Now let's check its equation:
+As you can see, even though our model has very little value in reality (because we classify everybody as a terrorist!), it has a perfect *recall* score. Of course, there is a reverse proportion in between *precision* and *recall*, when we increase *recall* we decrease *precision*.
+But, do we need to keep track of both of these metrics when both are important to us? The answer is no because we have *F1 Score* to do that for us. Now let's check its equation:
 
 $$F1 = 2 * \frac{precision*recall}{precision+recall}$$
 
@@ -220,16 +216,16 @@ $precision=1.0$ &nbsp; and &nbsp; $recall=0.0$ &nbsp; average of them is &nbsp; 
 ## Receiver Operating Characteristic (ROC) Curve
 
 ROC curve is a very useful visualization tool that can help us infer our model's performance. It shows us the relationship between precision and recall as we vary a threshold for selecting positives. To be a bit more clear: if our model is trying to predict if a person is smiling from
-a given image, it could output a score between 0 and 43. We can then choose a threshold to decide when we have a positive (smile) sample. Like I said before, ROC curve helps us
+a given image, it could output a score between 0 and 43. We can then choose a threshold to decide when we have a positive (smile) sample. Like I said before, the ROC curve helps us
 to see our model's performance with different thresholds.
 
-In ROC curve, we plot *"False Positive Rate (FPR)"* on the x-axis, and *"True Positive Rate (TPR)"* on the y-axis. We have already seen true positive rate in this post, it is recall. And the false positive rate is the probability of a false alarm: how many times our model wrongly classified an actual negative sample as positive?
+In the ROC curve, we plot *"False Positive Rate (FPR)"* on the x-axis, and *"True Positive Rate (TPR)"* on the y-axis. We have already seen true positive rate in this post, it is recall. And the false positive rate is the probability of a false alarm: how many times our model wrongly classified an actual negative sample as positive?
 
-$$\text{True Positive Rate} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}$$
+$$True \ Positive \ Rate = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
 
 <br>
 
-$$\text{False Positive Rate} = \frac{\text{False Positives}}{\text{False Positives + True Negatives}}$$
+$$False \ Positive \ Rate = \frac{False \ Positives}{False \ Positives + True \ Negatives}$$
 
 <br>
 
@@ -297,20 +293,17 @@ print("AUC FOR THE OTHER CURVE: ", auc_score)
 <br>
 
 The figure above shows an example of a ROC curve. Each curve drawn on the graph represents a model. When we move along a curve, we walk through different values of threshold. As it can be
-seen from the graph, each curve starts at the origin and ends at the right top corner of the graph. This is because of the extremes of the threshold value, namely 0 and 1. When the 
-threshold is "0", our model classifies everything as *positive*, so, both the *True Positive Rate* and *False Positive Rate* becomes 1 ( in true positive rate case we don't have 
-any "False Negatives", and in false positive rate case we don't have any "True Negatives" ). On the other hand, when the threshold is "1", we classify everything as *negative*, so, both
-*True Positive Rate*, and *False Positive Rate* becomes 0. From this logic, we can see that threshold decreases on a curve in the direction from top-right to bottom-left.
+seen from the graph, each curve starts at the origin and ends at the right top corner of the graph. This is because of the extremes of the threshold value, namely 0 and 1. When the threshold is "0", our model classifies everything as *positive*, so, both the *True Positive Rate* and *False Positive Rate* becomes 1 ( in true positive rate case we don't have any "False Negatives", and in false positive rate case we don't have any "True Negatives" ). On the other hand, when the threshold is "1", we classify everything as *negative*, so, both
+*True Positive Rate*, and *False Positive Rate* becomes 0. From this logic, we can see that the threshold decreases on a curve in the direction from top-right to bottom-left.
 
-The black diagonal line shows the case when we have equal true and false positive rate for each threshold value. This means that the model doesn't have any ability to distinguish between
+The black diagonal line shows the case when we have an equally true and false positive rate for each threshold value. This means that the model doesn't have any ability to distinguish between
 positive and negative cases, it is a random model. We expect our trained model to draw a curve above the diagonal line.
 
-To measure which model we train has higher value to us, we use a method called *"Area Under the Curve"* shortly **AUC**. Value of AUC also ranges between 0 and 1, and the higher is the better. As its name suggests, it is calculated by calculating the *area* under a drawn ROC curve. As an example the AUC of the diagonal line is 0.5.
+To measure which model we train has a higher value to us, we use a method called *" Area Under the Curve"* shortly **AUC**. The value of AUC also ranges between 0 and 1, and the higher is the better. As its name suggests, it is calculated by calculating the *area* under a drawn ROC curve. As an example, the AUC of the diagonal line is 0.5.
 
 ## Putting All Together -- An Example
 
-Let's make an example to put everything we learned together. In this example, we want our model to classify if a person has an 
-infectious virus. On its output, it gives us some score between $0.0-1.0$ (note that the score doesn't need to be between $0.0-1.0$, it
+Let's make an example to put everything we learned together. In this example, we want our model to classify if a person has an infectious virus. On its output, it gives us some score between $0.0-1.0$ (note that the score doesn't need to be between $0.0-1.0$, it
 could be in another range) that we can use to predict if a patient is ill.
 
 We have data of 1000 patients. This data contains some test results as well as the actual status of the patient (if s/he has the virus
@@ -329,6 +322,7 @@ or not). Let's say we trained a model, tested it on different thresholds, and th
 |      0.8      |   270  |    80   |   420  |   230  |
 |      0.9      |   140  |    40   |   460  |   360  |
 |      1.0      |    0   |    0    |   500  |   500  |
+{:.my-table}
 
 **Note:** Since it would take me more time to actually train a model and draw this table, I manually picked the values that are visible in the table. The point here is to understand how everything works, and I don't think doing this causes any harm, but saves me some time :).
 
@@ -382,52 +376,51 @@ thus it's *precision* is very low (hence the *F1 Score* is low). On the other ha
 so, both the model's *precision* and *recall* is 0. When we move along the line and decrease the threshold, the model starts to classify more and more positives, hence *recall* 
 starts increasing. However, together with *True Positives*, *False Positives* increases as well, this causes *precision* to decrease. 
 
-So in the end, we can play with different values of threshold, and choose one that maximizes the metric of our choice. For example, if we want to use *F1 Score* as our metric, based
-on the given table above, we would choice 0.4 as our threshold, and use it whenever we want to make a prediction with our model.
+So in the end, we can play with different values of threshold and choose one that maximizes the metric of our choice. For example, if we want to use *F1 Score* as our metric, based
+on the given table above, we would choose 0.4 as our threshold, and use it whenever we want to make a prediction with our model.
 
 ## Recap
 
 * **Precision** helps you to answer the following question: Among all of the positives my model predicted, how many percent of it was actually right? So when it is crucial for you to 
-have low amount of *False Positives* (e.g. if you classify an email as a spam when your model outputs a positive), and "the negative cases (both false and true)" are less important 
+have a low amount of *False Positives* (e.g. if you classify an email as spam when your model outputs a positive), and "the negative cases (both false and true)" are less important 
 for you, this could be the metric of your choice,
 
-$$precision = \frac{\text{True Positives}}{\text{True Positives + False Positives}}$$
+$$precision = \frac{True \ Positives}{True \ Positives + False \ Positives}$$
 
-* **Recall** helps you to answer the following question: Among all of the actual positives I have, how many percent of it my model could actually predicted right? So when it is crucial 
-for you to have low amount of *False Negatives* (e.g. a patient has an infectious virus, and a false negative means that your model says that s/he doesn't have).
+* **Recall** helps you to answer the following question: Among all of the actual positives I have, how many percent of it my model could actually predict right? So when it is crucial 
+for you to have a low amount of *False Negatives* (e.g. a patient has an infectious virus and a false negative means that your model says that s/he doesn't have).
 
-$$recall = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}$$
+$$recall = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
 
-* **F1 Score** is the metric of choice when both *precision* and *recall* is important for you. Because this metric combines both together, and punishes extreme values for each.
+* **F1 Score** is the metric of choice when both *precision* and *recall* is important for you. Because this metric combines both together and punishes extreme values for each.
 
 $$F1 = 2 * \frac{precision*recall}{precision+recall}$$
 
-* **Receiver Operating Characteristic (ROC)** curve is obtained by plotting *False Positive Rate (FPR)* on the x-axis, and *True Positive Rate (TPR)* on the y-axis. A single curve 
-represent a single model, and moving along it represent changing threshold. ROC curve is very informative, in a sense that, it puts everything we learned in this post together and gives 
+* **Receiver Operating Characteristic (ROC)** curve is obtained by plotting *False Positive Rate (FPR)* on the x-axis, and *True Positive Rate (TPR)* on the y-axis. A single curve represents a single model, and moving along it represents changing the threshold. ROC curve is very informative, in a sense that, it puts everything we learned in this post together and gives 
 us a very nice visualization
 
-$$\text{True Positive Rate} = \frac{\text{True Positives}}{\text{True Positives + False Negatives}}$$
+$$True \ Positive \ Rate = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
 
 <br>
 
-$$\text{False Positive Rate} = \frac{\text{False Positives}}{\text{False Positives + True Negatives}}$$
+$$False \ Positive \ Rate = \frac{False \ Positives}{False \ Positives + True \ Negatives}$$
 
 <br>
 
 * **Area Under the Curve** help you to answer the following question: Among all of the models I trained, which one is actually is the best? As its name suggests, 
-it is calculated by calculating area under the curve. In this blog post we used ROC as our graph, so we calculated area below the curves that was drawn on it.
+it is calculated by calculating the area under the curve. In this blog post, we used ROC as our graph, so we calculated the area below the curves that were drawn on it.
 
-# Conculusions
+## Conclusions
 
-It is very crucial to understand that the metric you choose meters a lot. Wrongly chosen metric can fool you to think that the model you trained is much better than it is in reality. This,
-in return, potentially harm your business or may be even worse. 
+It is very crucial to understand that the metric you choose meters a lot. A wrongly chosen metric can fool you to think that the model you trained is much better than it is in reality. This,
+in return, potentially harm your business or maybe even worse. 
 
 You should keep in mind that accuracy is not the only metric that exists. While deciding which metric to use, you should ask yourself the following questions:
 1. What my model is actually doing?
 2. What is the consequence of my model's decision?
-3. What is the most important thing I want from my model? Is it low number of *False Positives*? Low number of *False Negatives*? or both are important?
-4. How my data look like? Is it balanced?
+3. What is the most important thing I want from my model? Is it a low number of *False Positives*? Low number of *False Negatives*? or both are important?
+4. How do my data look like? Is it balanced?
 
-After asking these questions, hopefully you can come up with a metric that best suits to your needs.
+After asking these questions, hopefully, you can come up with a metric that best suits your needs.
 
 Please leave a comment below if you have any feedback, criticism, or something that you would like to discuss. I can also be reached on social media:  [@kivanc_yuksel](https://twitter.com/kivanc_yuksel)
