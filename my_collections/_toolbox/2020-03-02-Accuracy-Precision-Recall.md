@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Accuracy, Precision, Recall, F1 Score and ROC curve'
+author: Kıvanç Yüksel
 excerpt: In this post, we discuss some other metrics that can be used for classification problems instead of accuracy. By real-world examples, it is shown how crucial it is to think very carefully before choosing a metric to use.
     Because wrongly chosen metrics can potentially fool you to believe that your model is very good when in reality it is not.
 
@@ -16,7 +17,7 @@ tags:
     - roc curve
     - auc
 categories: [toolbox]
-date: 2019-06-25 13:14:15
+date: 2020-03-08 13:14:15
 ---
 
 {% capture jumbotron-content %}
