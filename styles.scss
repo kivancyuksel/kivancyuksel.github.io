@@ -9,6 +9,7 @@
 //@import "github";
 //@import "tango";
 
+
 html {
     font-size: 120%;
 }
@@ -51,6 +52,9 @@ h3 {
 }
 
 
+.my-equation {
+    overflow: scroll;
+}
 
 
 .half-height-image {

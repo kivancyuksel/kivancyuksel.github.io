@@ -148,7 +148,9 @@ To deal with these problems, let's check some other metrics than accuracy.
 ## Precision 
 Let's start with the mathematical formula of precision:
 
+<div class="my-equation">
 $$precision = \frac{True \ Positives}{True \ Positives + False \ Positives}$$
+</div>
 
 Let's think about this equation a little bit. What benefit do we get using precision as our metric? 
 
@@ -156,7 +158,9 @@ As long as there are no *False Positives* your model's accuracy is $1$ (assuming
 The moment you start having some *False Positives*, the precision starts decreasing. We had 99% accuracy on 
 above example, let's check what precision we have:
 
+<div class="my-equation">
 $$precision = \frac{0}{0+1} = 0.0$$
+</div>
 
 Now we are getting somewhere. So, based on precision, our model is not that good after all... But, when to use precision? If the number of 
 *False Positives* are crucial to you, then you should use precision. For example, if your model predicts whether an email is a spam, you would be very concerned with the number of *False Positives* you have. 
@@ -175,7 +179,9 @@ Now we are getting somewhere. So, based on precision, our model is not that good
 ## Recall
 What about recall then? Again, let's check the equation:
 
+<div class="my-equation">
 $$recall = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
+</div>
 
 This time, as long as there is no *False Negative*, we are home. Whenever the cost of having *False Negatives*
  is too high, maybe you should consider using recall as your metric. As an example, we can think of a model that predicts if a patient has an infectious virus. When we have a *False Negative*, we say, okay, this patient doesn't have a virus, when in reality s/he has and the cost of having a *False Positive* is more people infected by the disease. 
@@ -192,16 +198,22 @@ This time, as long as there is no *False Negative*, we are home. Whenever the co
 
 Before we delve into *F1 Score's* equation, I would like you to imagine a situation where things can go wrong, let's look at *recall's* equation again:
 
+<div class="my-equation">
 $$recall=\frac{True \ Positives}{True \ Positives + False \ Negatives}$$
+</div>
 
 What could possibly go wrong here? Well, considering the classification problem we discussed earlier; what happens if we classify everyone as a terrorist? Let's see:
 
+<div class="my-equation">
 $$recall = \frac{1}{1+0} = 1$$
+</div>
 
 As you can see, even though our model has very little value in reality (because we classify everybody as a terrorist!), it has a perfect *recall* score. Of course, there is a reverse proportion in between *precision* and *recall*, when we increase *recall* we decrease *precision*.
 But, do we need to keep track of both of these metrics when both are important to us? The answer is no because we have *F1 Score* to do that for us. Now let's check its equation:
 
+<div class="my-equation">
 $$F1 = 2 * \frac{precision*recall}{precision+recall}$$
+</div>
 
 F1 score combines both precision and recall, so that our metric considers both of them. The reason why F1 score uses harmonic mean instead 
 of averaging both values ( $\frac{precision+recall}{2}$ ) is because harmonic mean punishes extreme values. When we have &nbsp; 
@@ -223,11 +235,15 @@ to see our model's performance with different thresholds.
 
 In the ROC curve, we plot *"False Positive Rate (FPR)"* on the x-axis, and *"True Positive Rate (TPR)"* on the y-axis. We have already seen true positive rate in this post, it is recall. And the false positive rate is the probability of a false alarm: how many times our model wrongly classified an actual negative sample as positive?
 
+<div class="my-equation">
 $$True \ Positive \ Rate = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
+</div>
 
 <br>
 
+<div class="my-equation">
 $$False \ Positive \ Rate = \frac{False \ Positives}{False \ Positives + True \ Negatives}$$
+</div>
 
 <br>
 
@@ -337,23 +353,33 @@ Based on this table, let's calculate everything we learned so far. Because of ea
 
 <br/>
 
+<div class="my-equation">
 $$precision = \frac{TP}{TP+FP} = \frac{400}{400+270} = 0.59$$
+</div>
 
 <br/>
 
+<div class="my-equation">
 $$recall = \frac{TP}{TP+FN} = \frac{400}{400+100} = 0.8$$
+</div>
 
 <br/>
 
+<div class="my-equation">
 $$F1 = 2*\frac{precision*recall}{precision+recall} = 2*\frac{0.59*0.8}{0.59+0.8} = 0.67$$
+</div>
 
 <br/>
 
+<div class="my-equation">
 $$TPR = recall = 0.8$$
+</div>
 
 <br/>
 
+<div class="my-equation">
 $$FPR = \frac{FP}{FP+TN} = \frac{270}{270+230} = 0.54$$
+</div>
 
 <br/>
 
@@ -387,25 +413,35 @@ on the given table above, we would choose 0.4 as our threshold, and use it whene
 have a low amount of *False Positives* (e.g. if you classify an email as spam when your model outputs a positive), and "the negative cases (both false and true)" are less important 
 for you, this could be the metric of your choice,
 
+<div class="my-equation">
 $$precision = \frac{True \ Positives}{True \ Positives + False \ Positives}$$
+</div>
 
 * **Recall** helps you to answer the following question: Among all of the actual positives I have, how many percent of it my model could actually predict right? So when it is crucial 
 for you to have a low amount of *False Negatives* (e.g. a patient has an infectious virus and a false negative means that your model says that s/he doesn't have).
 
+<div class="my-equation">
 $$recall = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
+</div>
 
 * **F1 Score** is the metric of choice when both *precision* and *recall* is important for you. Because this metric combines both together and punishes extreme values for each.
 
+<div class="my-equation">
 $$F1 = 2 * \frac{precision*recall}{precision+recall}$$
+</div>
 
 * **Receiver Operating Characteristic (ROC)** curve is obtained by plotting *False Positive Rate (FPR)* on the x-axis, and *True Positive Rate (TPR)* on the y-axis. A single curve represents a single model, and moving along it represents changing the threshold. ROC curve is very informative, in a sense that, it puts everything we learned in this post together and gives 
 us a very nice visualization
 
+<div class="my-equation">
 $$True \ Positive \ Rate = \frac{True \ Positives}{True \ Positives + False \ Negatives}$$
+</div>
 
 <br>
 
+<div class="my-equation">
 $$False \ Positive \ Rate = \frac{False \ Positives}{False \ Positives + True \ Negatives}$$
+</div>
 
 <br>
 
