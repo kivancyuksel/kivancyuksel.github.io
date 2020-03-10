@@ -17,7 +17,7 @@ tags:
     - roc curve
     - auc
 categories: [toolbox]
-date: 2020-03-08 13:14:15
+date: 2020-03-02 13:14:15
 ---
 
 {% capture jumbotron-content %}
@@ -44,8 +44,9 @@ One of the most important decisions that have to be made before starting a Machi
 It is so crucial, in a sense that the wrong metric can potentially trick you to believe that your model is good, or getting better when in reality it is not.
 
 I have a feeling that *accuracy* sometimes might be considered as "one metric to rule them all". However, this is not the case. 
-One should choose which metric to use based on needs. What is trying to be achieved? What is the output of the model? 
-What is the impact of your model to say that something belongs to some particular class (what is the consequence of this decision)? What about your data? What kind of it do you have? These are some essential questions that one should consider before doing anything else.
+Choosing a metric should be done after asking a number of questions:  What is trying to be achieved? What is the output of the model? 
+What is the consequence of its decision? What about your data? What kind of it do you have? Is it balanced? These are some 
+essential questions that one should consider before doing anything else.
 
 This post introduces four metrics, namely: *accuracy, precision, recall, and f1 score*. None of these metrics are better, 
 or worse than the other. The point here is to choose the right one for the problem you are trying to solve. Alright, let's get started then... :)
@@ -135,7 +136,7 @@ Now that we know how confusion matrix works, let's come back to the main topic o
 </div>    
 
 
-Well, you need to be very careful now... If you didn't think carefully before you choose the metric you used, and directly picked accuracy as your metric, you might fool yourself to believing that your model is amazing. Look, it has a 99% accuracy! But... There are a number of problems here. The first, and probably the most obvious, one is: the data is imbalanced. Your model can easily learn to output a single label no matter what its input is and still have very high accuracy. There are different methods you can use to solve this particular problem,
+Well, you need to be very careful now... If you didn't think carefully before you choose the metric you used, and directly picked accuracy as your metric, you might fool yourself to believing that your model is amazing. Look, it has 99% accuracy! But... There are a number of problems here. The first, and probably the most obvious, one is: the data is imbalanced. Your model can easily learn to output a single label no matter what its input is and still have very high accuracy. There are different methods you can use to solve this particular problem,
 and one of them is to choose a different metric then accuracy ( since this post is not specifically about this problem, I don't mention the other methods here ).
 
 Another problem is: have you actually thought about how important is your model's decision? What impact it has in real life? For example, what if your model predicts whether a person has cancer? or what if it predicts if a person is a terrorist? ( From the confusion matrix above )

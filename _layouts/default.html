@@ -53,14 +53,40 @@ frame_image: "/assets/img/full_width_image.jpg"
         <script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script>
 
         <!-- MathJax -->
+        <!--
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({
              "HTML-CSS": { linebreaks: { automatic: true } },
                      SVG: { linebreaks: { automatic: true } }
             });
         </script>
+        -->
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true } });
+        </script>
+        <script>
+            window.MathJax = {
+              menuSettings: {
+                autocollapse: true
+              }
+            };
+
+            script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.onload = function() {
+              // remote script has loaded
+            };
+            script.src = 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_CHTML-full';
+            document.getElementsByTagName('head')[0].appendChild(script);
+            var box = document.getElementById('box');
+            var rng = document.getElementById('rngWidth');
+            var note = document.getElementById('rngValue');
+            rng.onchange = function() {
+              box.style.width = this.value + 'px';
+              MathJax.Extension["auto-collapse"].resizeHandler()
+              note.innerHTML = this.value + 'px';
+            }
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
