@@ -49,18 +49,19 @@ frame_image: "/assets/img/full_width_image.jpg"
         <script type="text/javascript" src="{{site.url}}/assets/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{{site.url}}/assets/js/mdb.min.js"></script>
-        <!-- Personal Script -->
-        <script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script>
 
         <!-- MathJax -->
-        <!--
         <script type="text/x-mathjax-config">
+            //MathJax.Hub.Config({
+            // "HTML-CSS": { linebreaks: { automatic: true } },
+            //         SVG: { linebreaks: { automatic: true } }
+            //});
             MathJax.Hub.Config({
-             "HTML-CSS": { linebreaks: { automatic: true } },
-                     SVG: { linebreaks: { automatic: true } }
+                "tagFormat": {
+                   "id": "deneme12",
+                 }
             });
         </script>
-        -->
         <script type="text/x-mathjax-config">
             MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true } });
         </script>
@@ -68,5 +69,8 @@ frame_image: "/assets/img/full_width_image.jpg"
 
         <script id="dsq-count-scr" src="//emkademy-2.disqus.com/count.js" async></script>
         <!-- ******** -->
+
+        <!-- Personal Script -->
+        <script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script>
     </body>
 </html>

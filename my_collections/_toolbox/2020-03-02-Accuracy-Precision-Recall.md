@@ -108,7 +108,7 @@ y_true = generate_random_labels(n, len(classes))
 y_pred = predict(n, len(classes))
 
 plot_confusion_matrix(y_true, y_pred, classes)
-% endhighlight %}
+{% endhighlight %}
 {% endcapture %}
 
 {% include collapse.html collapse-unique-id=collapse-unique-id collapse-content=collapse-content collapse-btn-title=collapse-btn-title collapse-git-link=collapse-git-link %}
@@ -144,9 +144,7 @@ To deal with these problems, let's check some other metrics than accuracy.
 ## Precision 
 Let's start with the mathematical formula of precision:
 
-<div class="my-equation">
 $$precision = \frac{True \ Positives}{True \ Positives + False \ Positives}$$
-</div>
 
 Let's think about this equation a little bit. What benefit do we get using precision as our metric? 
 
