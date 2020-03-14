@@ -66,27 +66,23 @@ import numpy as np
 from sklearn import metrics
 from matplotlib.pyplot import figure
 
-classes_to_labels = {
-    "happy": 0.0,
-    "sad": 1.0,
-    "angry": 2.0
-}
-
-n = 100
-
 # A dummy function used to create random "true labels"
-def generate_random_labels(n):
-    return np.random.choice(list(classes_to_labels.values()), n)
+def generate_random_labels(n, n_classes):
+    return np.random.choice(n_classes, n)
 
 # A dummy function to simulate model predictions
-def predict(n):
-    return np.random.choice(list(classes_to_labels.values()), n)
+def predict(n, n_classes):
+    return np.random.choice(n_classes, n)
 
 
-def plot_confusion_matrix(confusion_matrix, class_names, title='Confusion matrix', cmap=plt.cm.Purples):
-    plt.imshow(confusion_matrix, interpolation='nearest', cmap=cmap)
-    plt.title(title)
+def plot_confusion_matrix(true_labels, predicted_labels, class_names):
+    labels = list(range(len(class_names)))
+    confusion_matrix = metrics.confusion_matrix(true_labels, predicted_labels, labels=labels)
+
+    figure(num=None, figsize=(16, 12), dpi=60, facecolor='w', edgecolor='k')
+    plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Purples)
     plt.colorbar()
+
     tick_marks = np.arange(len(class_names))
     plt.xticks(tick_marks, class_names, rotation=90, fontsize=20)
     plt.yticks(tick_marks, class_names, fontsize=20)
@@ -98,21 +94,21 @@ def plot_confusion_matrix(confusion_matrix, class_names, title='Confusion matrix
                  horizontalalignment="center",
                  color="white" if confusion_matrix[i, j] > thresh else "black", fontsize=20)
 
+    plt.title("Confusion matrix")
     plt.ylabel('Actual label', fontsize=20)
     plt.xlabel('Predicted label', fontsize=20)
     plt.tight_layout()
     plt.show()
 
-y_true = generate_random_labels(n)
-y_pred = predict(n)
 
-class_names = list(classes_to_labels.keys())
-labels = list(classes_to_labels.values())
+classes = ["happy", "sad", "angry"]
+n = 100
 
-figure(num=None, figsize=(16, 12), dpi=60, facecolor='w', edgecolor='k')
-confusion_matrix = metrics.confusion_matrix(y_true, y_pred, labels=labels)
-plot_confusion_matrix(confusion_matrix, class_names)
-{% endhighlight %}
+y_true = generate_random_labels(n, len(classes))
+y_pred = predict(n, len(classes))
+
+plot_confusion_matrix(y_true, y_pred, classes)
+% endhighlight %}
 {% endcapture %}
 
 {% include collapse.html collapse-unique-id=collapse-unique-id collapse-content=collapse-content collapse-btn-title=collapse-btn-title collapse-git-link=collapse-git-link %}
