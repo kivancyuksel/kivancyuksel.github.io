@@ -14,13 +14,3 @@ $(document).ready(function () {
   });
 });
 
-
-
-
-window.addEventListener("load", function(event) {
-    var equations = document.getElementsByClassName("MathJax_Display");
-    for (var i = 0; i < equations.length; i++) {
-        equations[i].className += " my-equation";
-    }
-});
-

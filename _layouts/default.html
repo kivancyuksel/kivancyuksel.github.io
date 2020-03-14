@@ -19,6 +19,12 @@ frame_image: "/assets/img/full_width_image.jpg"
         <link href="{{site.url}}/assets/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
         <!-- Bootstrap core CSS -->
         <link href="{{site.url}}/assets/css/bootstrap.min.css" rel="stylesheet">
+        
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true } });
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
   </head>
 
   <body>
@@ -49,26 +55,9 @@ frame_image: "/assets/img/full_width_image.jpg"
         <script type="text/javascript" src="{{site.url}}/assets/js/bootstrap.min.js"></script>
         <!-- MDB core JavaScript -->
         <script type="text/javascript" src="{{site.url}}/assets/js/mdb.min.js"></script>
-
-        <!-- MathJax -->
-        <script type="text/x-mathjax-config">
-            //MathJax.Hub.Config({
-            // "HTML-CSS": { linebreaks: { automatic: true } },
-            //         SVG: { linebreaks: { automatic: true } }
-            //});
-            MathJax.Hub.Config({
-                "tagFormat": {
-                   "id": "deneme12",
-                 }
-            });
-        </script>
-        <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processEscapes: true } });
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
         <script id="dsq-count-scr" src="//emkademy-2.disqus.com/count.js" async></script>
         <!-- ******** -->
+
 
         <!-- Personal Script -->
         <script type="text/javascript" src="{{site.url}}/assets/js/main.js"></script>

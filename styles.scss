@@ -52,11 +52,6 @@ h3 {
 }
 
 
-.my-equation {
-    overflow: scroll;
-}
-
-
 .half-height-image {
   height: 50vh;
   min-height: 500px;
@@ -215,4 +210,9 @@ a {
     -moz-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
     transform: rotate(-135deg);
+}
+
+
+@media (max-width: 576px) {
+ .MJXc-display { overflow: auto; } /* Or change the height or whatever */
 }
