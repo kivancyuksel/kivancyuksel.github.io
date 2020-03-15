@@ -3,22 +3,11 @@ layout: default
 frame_image: "/assets/img/logo_transparent_damla.png" 
 ---
 
-{% assign all_posts = '' | split: '' %}
-{% assign collection_images = '' | split: '' %}
-{% for collection in site.collections %}
-    {% assign name = collection.label %}
-    {% unless name == "posts" %}
-        {% assign all_posts = all_posts | concat: site[name] %}
-        {% for post in site[name] %}
-            {% assign collection_images = collection_images | join: "," | append: "," | append: collection.image | split: "," %}
-        {% endfor %}
-    {% endunless %}
-{% endfor %}
 
-{% assign all_posts = all_posts | reverse %}
-{% assign collection_images = collection_images | reverse %}
+{% assign posts = site.documents | where:"layout", "post" | sort: 'date' | reverse %}
+{% assign post_images = posts | map: "image" %}
 
-{% include posts_list.html all_posts=all_posts image_src=collection_images %}
+{% include posts_list.html all_posts=posts image_src=post_images %}
 
 
 

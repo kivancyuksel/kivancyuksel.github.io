@@ -1,6 +1,7 @@
 ---
 title: 0.3 Eşitsizlikler
 author: Kıvanç Yüksel
+scrollspy_content: "Pozitif ve Negatif Sayılar,Küçüktür ve Büyüktür ifadeleri,Aralık,Mutlak değer"
 categories:
   - Kalkülüs Öncesi
 tags:
@@ -9,6 +10,8 @@ tags:
   - python
 excerpt: Bu postta positif ve negatif sayılar, bu sayıların özellikleri, eşitsizlikler, aralık ve mutlak değer konularını inceleceğiz
 ---
+
+<span id="scrollspy-item-1"></span>
 ## Pozitif ve Negatif Sayılar
 
 İlk derste çizdiğimiz reel doğruyu hatırlıyor musunuz 
@@ -94,6 +97,7 @@ n = 1/m
 print("n positif" if n > 0 else "n negatif")
 {% endhighlight %}
 
+<span id="scrollspy-item-2"></span>
 ## Küçüktür ve Büyüktür ifadeleri
 
 $a$ sayısı $b$ sayısından küçüktür ($a < b$ şeklinde yazılır) diyebilmemiz için, reel doğru üzerinde
@@ -210,6 +214,7 @@ bir önceki açıklamayla benzer olduğunu görebilirsiniz.
 
 Eğer bu ifadelerden herhangi biri aklınıza yatmadıysa, lütfen biraz zaman ayırarak bu ifadelerdeki değiştenlere örnek olarak rasgele sayılar vererek bu ifadelerin doğruluğunu test edin.
 
+<span id="scrollspy-item-3"></span>
 ## Aralık
 
 Şimdi basit gibi görünen, ancak tanımının iyi bir şekilde anlaşılmasının oldukça önemli olduğu bir konuya
@@ -382,7 +387,7 @@ print(kume1.union(kume2))
 
 $$(-\infty, 0) \cup (0, \infty)$$
 
-
+<span id="scrollspy-item-4"></span>
 ## Mutlak değer
 
 Mutlak değer bir sayının 0'dan olan uzaklığını gösteren bir değerdir. 

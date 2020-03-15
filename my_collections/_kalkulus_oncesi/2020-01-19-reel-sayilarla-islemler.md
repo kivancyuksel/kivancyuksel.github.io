@@ -1,6 +1,7 @@
 ---
 title: '0.2 &#8211; Reel Sayılarla işlemler'
 author: Kıvanç Yüksel
+scrollspy_content: "Yer Değiştirme (Commutativity) ve Birleşme (Associativity) Özellikleri,Matematiksel İşlemlerde İşlem Önceliği,Dağılma Özelliği,Toplamanın Tersi ve Çıkarma Arasındaki Bağlantı,Çarpmanın Tersi ve Bölme Arasındaki Bağlantı"
 categories:
   - Kalkülüs Öncesi
 tags:
@@ -14,6 +15,7 @@ excerpt: Rasyonel sayılarda olduğu gibi, reel sayılara da uygulanan dört iş
 Rasyonel sayılarda olduğu gibi, reel sayılarada uygulanan dört işlemin sonucunda yine bir reel sayı elde edilir (0 ile bölümün dışında). 
 Bu bölümde ileride işinize yarayacak ve bu sebepten dolayı iyice öğrenmeniz gereken reel sayılara ait bazı özellikleri göreceğiz. 
 
+<span id="scrollspy-item-1"></span>
 ## Yer Değiştirme (Commutativity) ve Birleşme (Associativity) Özellikleri
 
 Yer değiştirme özelliğinin bize söylediği şey; toplama ve çarpma işlemlerinde sayıların sırasının bir önemi olmadığıdır. Yani;
@@ -51,7 +53,7 @@ $$(a+b)+c = a+b+c \ \ ve \ \ (ab)c=abc$$
 {% capture jumbotron-include %}{% include jumbotron.html content=jumbotron-content %}{% endcapture %}
 {{ jumbotron-include | markdownify }}
 
-
+<span id="scrollspy-item-2"></span>
 ## Matematiksel İşlemlerde İşlem Önceliği
 
 Aşağıdaki ifadeye bir göz atın,
@@ -115,7 +117,7 @@ $$\begin{eqnarray}
 print(6*2 + 2*3 + (3*(4+5)+4*2))
 {% endhighlight %}
 
-
+<span id="scrollspy-item-3"></span>
 ## Dağılma Özelliği
 
 Dağılma özelliği toplama ile çarpmayı birbirine bağlar. Dağılma özelliği sayesinde bir toplamın çarpımını, çarpmaların toplamına dönüştürebilirsiniz ( tabikide bunun tam terside mümkün). 
@@ -195,6 +197,7 @@ Dağılma özelliğini kullanarak bir çoğunuzun aşina olduğu $(a+b)^2$ matem
 
 $$(a+b)^2 = (a+b)(a+b) = a^2 + 2ab + b^2$$
 
+<span id="scrollspy-item-4"></span>
 ## Toplamanın Tersi ve Çıkarma Arasındaki Bağlantı
 
 Toplama işleminde etkisiz eleman "0" dır. Bunun sebebi, herhangi bir sayıyı "0" ile topladığınız zaman sonucun değişmediğidir. Herhangi bir reel sayının toplamaya göre tersi, 
@@ -257,6 +260,7 @@ $(a+b)(a-b)$ ifadesini genişletin.
 Yukarıdaki soruyu alıştırma olması için kendiniz çözmeye çalışırsanız eğer sizin faydanıza olacaktır.
 Bulduğunuz sonucu bu sayfanın yorumlar kısmına yazabilirsiniz.
 
+<span id="scrollspy-item-5"></span>
 ## Çarpmanın Tersi ve Bölme Arasındaki Bağlantı
 
 Çarpma işleminde etkisiz eleman "1" dir. Bunun sebebi, herhangi bir sayıyı "1" ile çarptığınız zaman sonucun

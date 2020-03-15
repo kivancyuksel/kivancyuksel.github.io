@@ -1,6 +1,7 @@
 ---
 title: '0 &#8211; Gerçek (Reel) Sayılar'
 author: Kıvanç Yüksel
+scrollspy_content: "Reel Doğru,Reel Doğru oluşturuluşu,Her Reel sayı aynı zamanda Rasyonel sayı mıdır?,Örnek"
 categories:
   - Kalkülüs Öncesi
 tags:
@@ -21,6 +22,7 @@ Bu bölümün numarasının &#8220;0&#8221; olmasının sebebi, bu bölümün k�
 
 **NOT:** Bazı terimlerden sonra gelen parantezlerin içinde bahsedilen terimlerin ingilizcelerini yazdım. Bunları bilmekte fayda olduğunu düşünüyorum.
 
+<span id="scrollspy-item-1"></span>
 ## 0.1 Reel Doğru
 
 **"Tam Sayılar (Integers)"** nelerdir?
@@ -88,6 +90,7 @@ Rasyonel sayılar fiziksel hesaplarda kullanılabilir.
 Ancak geometri, cebir ve kalkülüs için bunlar yeterli olmayabilir. 
 Rasyonel sayıların yetmediği yerde **"Gerçek (Reel) sayılar"** kullanılabilir. Rasyonel sayıların hangi durumlarda yetmeyebileceğine bir bakalım isterseniz.
 
+<span id="scrollspy-item-2"></span>
 ## Reel Doğru oluşturuluşu {#reel_dogru}
 
 Herhangi bir sınırı olmayan yatay bir doğru düşünün. Bu doğrunun üzerinde herhangi bir noktaya 0 değerini verin.
@@ -112,6 +115,7 @@ Eğer bu doğrunun üzerinde hiç boşluk yoksa, yani akla gelebilecek bütün s
 kesintisiz bir doğru oluşturuyorsa eğer bu doğruya "Reel Doğru" diyebiliriz. Peki bu gerçektende böyle mi acaba? 
 Sadece rasyonel sayılar kullanılarak bu bir reel doğru hiç boşluk kalmayacak şekilde doldurulabilir mi?
 
+<span id="scrollspy-item-3"></span>
 ## Her Reel sayı aynı zamanda Rasyonel sayı mıdır?
 
 Eğer başka yapacak işimiz olmadan en küçüğünden en büyüğüne bütün rasyonel sayıları bu doğrunun üzerine yazacak olsaydık, bu, 
@@ -154,6 +158,7 @@ Bunun kanıtını burada vermeyeceğim, ancak merak edenler internetten bakabili
 Rasyonel olmayan bir reel sayıya "İrrasyonel Sayı" denir. Rasyonel olmayan bir reel sayı bulduk ($\sqrt{2}$), aynı zamanda ilerki 
 derslerde de karşılaşacağımız $\pi$ ve $e$ sayılarıda irrasyonel sayılara birer örnektir.
 
+<span id="scrollspy-item-4"></span>
 ### Örnek:
 
 $7 + \sqrt{2}$ sayısının irrasyonel bir sayı olduğunu gösteriniz.

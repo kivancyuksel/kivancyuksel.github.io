@@ -2,6 +2,7 @@
 layout: post
 title: 'Accuracy, Precision, Recall, F1 Score and ROC curve'
 author: Kıvanç Yüksel
+scrollspy_content: "Objectives,Precision,Recall,F1 Score,Receiver Operating Characteristic (ROC) Curve,Putting All Together,Recap,Conclusions"
 excerpt: In this post, we discuss some other metrics that can be used for classification problems instead of accuracy. By real-world examples, it is shown how crucial it is to think very carefully before choosing a metric to use.
     Because wrongly chosen metrics can potentially fool you to believe that your model is very good when in reality it is not.
 
@@ -20,6 +21,7 @@ categories: [toolbox]
 date: 2020-03-02 13:14:15
 ---
 
+<span id="scrollspy-item-1"></span>
 {% capture jumbotron-content %}
 <h3>Objectives</h3>
 <p>By the end of this post you should:</p>
@@ -141,6 +143,7 @@ terrorist, even though there is one. Or, if this was a model which is used to cl
 
 To deal with these problems, let's check some other metrics than accuracy.
 
+<span id="scrollspy-item-2"></span>
 ## Precision 
 Let's start with the mathematical formula of precision:
 
@@ -169,7 +172,7 @@ Now we are getting somewhere. So, based on precision, our model is not that good
 {% capture jumbotron-include %}{% include jumbotron.html content=jumbotron-content %}{% endcapture %}
 {{ jumbotron-include | markdownify }}
 
-
+<span id="scrollspy-item-3"></span>
 ## Recall
 What about recall then? Again, let's check the equation:
 
@@ -188,6 +191,7 @@ This time, as long as there is no *False Negative*, we are home. Whenever the co
 {% capture jumbotron-include %}{% include jumbotron.html content=jumbotron-content %}{% endcapture %}
 {{ jumbotron-include | markdownify }}
 
+<span id="scrollspy-item-4"></span>
 ## F1 Score
 
 Before we delve into *F1 Score's* equation, I would like you to imagine a situation where things can go wrong, let's look at *recall's* equation again:
@@ -221,6 +225,7 @@ $precision=1.0$ &nbsp; and &nbsp; $recall=0.0$ &nbsp; average of them is &nbsp; 
 {% capture jumbotron-include %}{% include jumbotron.html content=jumbotron-content %}{% endcapture %}
 {{ jumbotron-include | markdownify }}
 
+<span id="scrollspy-item-5"></span>
 ## Receiver Operating Characteristic (ROC) Curve
 
 ROC curve is a very useful visualization tool that can help us infer our model's performance. It shows us the relationship between precision and recall as we vary a threshold for selecting positives. To be a bit more clear: if our model is trying to predict if a person is smiling from
@@ -313,6 +318,7 @@ positive and negative cases, it is a random model. We expect our trained model t
 
 To measure which model we train has a higher value to us, we use a method called *" Area Under the Curve"* shortly **AUC**. The value of AUC also ranges between 0 and 1, and the higher is the better. As its name suggests, it is calculated by calculating the *area* under a drawn ROC curve. As an example, the AUC of the diagonal line is 0.5.
 
+<span id="scrollspy-item-6"></span>
 ## Putting All Together -- An Example
 
 Let's make an example to put everything we learned together. In this example, we want our model to classify if a person has an infectious virus. On its output, it gives us some score between $0.0-1.0$ (note that the score doesn't need to be between $0.0-1.0$, it
@@ -401,6 +407,7 @@ starts increasing. However, together with *True Positives*, *False Positives* in
 So in the end, we can play with different values of threshold and choose one that maximizes the metric of our choice. For example, if we want to use *F1 Score* as our metric, based
 on the given table above, we would choose 0.4 as our threshold, and use it whenever we want to make a prediction with our model.
 
+<span id="scrollspy-item-7"></span>
 ## Recap
 
 * **Precision** helps you to answer the following question: Among all of the positives my model predicted, how many percent of it was actually right? So when it is crucial for you to 
@@ -442,6 +449,7 @@ $$False \ Positive \ Rate = \frac{False \ Positives}{False \ Positives + True \ 
 * **Area Under the Curve** help you to answer the following question: Among all of the models I trained, which one is actually is the best? As its name suggests, 
 it is calculated by calculating the area under the curve. In this blog post, we used ROC as our graph, so we calculated the area below the curves that were drawn on it.
 
+<span id="scrollspy-item-8"></span>
 ## Conclusions
 
 It is very crucial to understand that the metric you choose meters a lot. A wrongly chosen metric can fool you to think that the model you trained is much better than it is in reality. This,

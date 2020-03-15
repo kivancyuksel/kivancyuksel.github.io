@@ -18,6 +18,13 @@ body {
     font-family: 'Poppins', sans-serif !important;
     color: #606060 !important;
     line-height: 1.8 !important;
+    position: relative;
+}
+
+.my-sticky {
+  position: -webkit-sticky !important; /* Safari */
+  position: sticky !important;
+  top: 150px !important;
 }
 
 h1 {

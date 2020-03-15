@@ -31,6 +31,7 @@ Evet, bu bir fonksiyonun gösterimi, ancak fonksiyonların ne yaptığını anla
 
 <br>
 
+
 <div class="text-center">
     <img src="{{site.url}}/assets/img/kalkulus_oncesi/fonksiyonlar/fonksiyon_diagram.png" class="img-fluid" alt="fonksiyonlarin sembollerle ifadesi">
     <p>Fonksiyonların sembollerle ifadesi</p>
@@ -51,6 +52,7 @@ Mesela, ben "Makine Öğrenimi Mühendisi (Machine Learning Engineer)" olarak ç
 mesela, verilen fotoğrafların içindeki nesneleri bulmak. Diyelimki, verilen bir fotoğrafın
 içindeki atların yerini bulmak istiyoruz. Yani yapmak istediğimiz şey aslında:
 
+
 <div class="text-center">
     <img src="{{site.url}}/assets/img/kalkulus_oncesi/fonksiyonlar/at_with_bbox.jpg" class="img-fluid" alt="">
     <p>Resimdeki atları tanımlayan bir model örneği</p>
@@ -67,7 +69,6 @@ Peki bunu nasıl yapacağız? Bu işlem size biraz tanıdık geldi mi? Bide şu 
 Ihtiyaçımız olan şey,  içine bir at resmi konulduğu zaman, resimdeki her bir at için bize atı çevreleyen dikdörtgenin koordinatlarını çıkartan bir fonksiyon. Bu fonksiyonu bulmaya çalışmak benim günlük olarak yaptığım işlerden bir tanesi. Bu blogda bu konularıda göreceğiz, ve şu anda bu konular için temel oluşturuyoruz.
 
 Eveeet, giriş yazısı için bu kadar konuşmak yeter. Son olarak, bu bölümde göreceğimiz konuların başlıklarına bakalım:
-
 
 {% capture jumbotron-content %}
 <h3>Fonksiyonlar Bölüm Başlıkları</h3>

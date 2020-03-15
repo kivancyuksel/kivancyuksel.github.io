@@ -1,24 +1,12 @@
-{% assign all_posts = '' | split: '' %}
-{% for collection in site.collections %}
-    {% assign name = collection.label %}
-    {% unless name == "posts" %}
-        {% assign all_posts = all_posts | concat: site[name] %}
-    {% endunless %}
-{% endfor %}
-
-{% assign all_posts = all_posts | reverse %}
-
+{% assign posts = site.documents | where:"layout", "post" | sort: 'date' | reverse %}
 
 <div class="col-lg-7 side-posts">
     <p class="border-left border-primary right-column-title"> &nbsp; Yakın Zamanda Yayınlananlar</p>
     <ul class="list-group list-group-flush">
-        {% for i in (0.. 5) %}
-            {% assign post = all_posts[i] %}
-            {% unless post.title == "Index" %}
-                <a href="{{site.url}}{{post.url}}">
-                    <li class="list-group-item">{{post.title}}</li>
-                </a>
-            {% endunless %}
+        {% for post in posts limit: 5 %}
+            <a href="{{site.url}}{{post.url}}">
+                <li class="list-group-item">{{post.title}}</li>
+            </a>
         {% endfor %}
     </ul>
 </div>

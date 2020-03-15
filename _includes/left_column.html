@@ -1,1 +1,16 @@
+
+{% assign scrollspy_content = page.scrollspy_content | split: "," %}
+
+{% if page.layout == "post" and page.scrollspy_content %}
+<nav id="navbar-example3" class="navbar navbar-light bg-light flex-column mt-4 my-sticky" style="z-index: 1">
+    <a class="navbar-brand text-success" href="#">Content</a>
+    <nav class="nav nav-pills flex-column">
+        {% for content in scrollspy_content %}
+            <a class="nav-link border-bottom" href="#scrollspy-item-{{forloop.index}}">{{content}}</a>
+        {% endfor %}
+    </nav>
+</nav>
+{% endif %}
+
+
 {% include ads_dikey.html %}
