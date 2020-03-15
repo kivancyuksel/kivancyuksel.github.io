@@ -1,4 +1,6 @@
 
+{% include ads_dikey.html %}
+
 {% assign scrollspy_content = page.scrollspy_content | split: "," %}
 
 {% if page.layout == "post" and page.scrollspy_content %}
@@ -12,5 +14,3 @@
 </nav>
 {% endif %}
 
-
-{% include ads_dikey.html %}
