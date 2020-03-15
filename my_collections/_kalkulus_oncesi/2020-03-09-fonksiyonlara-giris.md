@@ -1,7 +1,7 @@
 ---
 title: "Fonksiyonlara Giriş"
 author: "Kıvanç Yüksel"
-excerpt: ""
+excerpt: "Bu yazıyla kalkülüs öncesi dersinde yeni bir bölüme geçiyoruz. Bu bölüm ileride göreceğimiz konuların neredeyse hepsinde kullanacağımız konulardan bahsettiği için oldukça onemli bir bölüm..."
 categories:
   - Kalkülüs Öncesi
 tags:
