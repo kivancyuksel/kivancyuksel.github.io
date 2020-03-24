@@ -17,7 +17,7 @@ tags:
     - true positive rate
     - roc curve
     - auc
-categories: [toolbox]
+categories: [Toolbox]
 date: 2020-03-02 13:14:15
 ---
 
@@ -463,4 +463,3 @@ You should keep in mind that accuracy is not the only metric that exists. While 
 
 After asking these questions, hopefully, you can come up with a metric that best suits your needs.
 
-Please leave a comment below if you have any feedback, criticism, or something that you would like to discuss. I can also be reached on social media:  [@kivanc_yuksel](https://twitter.com/kivanc_yuksel)

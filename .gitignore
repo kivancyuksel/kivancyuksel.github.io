@@ -12,3 +12,5 @@ package.json
 copy_config.yml
 all_feed_xml_copy.xml
 .*.swp
+*.drawio
+*.pdf

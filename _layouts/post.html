@@ -12,13 +12,14 @@ layout: default
         {{ content }}
     </div>
 
+
+    Please leave a comment below if you have any feedback, criticism, or something that you would like to discuss. I can also be reached on social media:  <a href="https://twitter.com/kivanc_yuksel" target="_blank">@kivanc_yuksel</a>
     <hr>
     {% if page.tags.size > 0 %}
         <span class="text-success">Tag{% if page.tags.size > 1 %}s{% endif %}:</span>
         <span class="text-primary">{{ page.tags | sort | join: ", " }}</span>
     {% endif %}
     <hr>
-
 
     {% include disqus.html %}
 

@@ -15,6 +15,7 @@ _: &kalkulus_oncesi_title "Kalkülüs Öncesi"
 _: &toolbox_image "/assets/img/toolbox/toolbox.jpg"
 _: &toolbox_title "Toolbox"
 _: &general_image "/assets/img/full_width_image.jpg"
+_: &author1 "Kıvanç Yüksel"
 
 
 defaults:
@@ -31,6 +32,7 @@ defaults:
         values:
             layout: "post"
             image: *kalkulus_oncesi_image
+            author: *author1
     -
         scope:
             path: ""
@@ -38,6 +40,7 @@ defaults:
         values:
             layout: "post"
             image: *toolbox_image
+            author: *author1
 
 
 collections_dir: my_collections

@@ -4,7 +4,9 @@
         aria-controls="{{include.collapse-unique-id}}">
         {{include.collapse-btn-title}}
     </a>
-    <a class="btn btn-primary" href="{{include.collapse-git-link}}" target="_blank">Jupyter Notebook</a>
+    {% if include.collapse-git-link != "" %}
+        <a class="btn btn-primary" href="{{include.collapse-git-link}}" target="_blank">Jupyter Notebook</a>
+    {% endif %}
 </div>
 <!-- / Collapse buttons -->
 
