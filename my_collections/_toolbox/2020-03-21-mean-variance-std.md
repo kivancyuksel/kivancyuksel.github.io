@@ -700,9 +700,10 @@ different; I hope that the things you learned in this blog post will help you to
 <span id="scrollspy-item-7"></span>
 ## References
 
-1. [https://worldpopulationreview.com/countries/average-height-by-country/](https://worldpopulationreview.com/countries/average-height-by-country/){:target="_blank"}
-2. [https://worldpopulationreview.com/countries/japan-population/](https://worldpopulationreview.com/countries/japan-population/){:target="_blank"}
-3. [https://www.guinnessworldrecords.com/news/2019/2/a-history-of-record-breaking-giants-100-years-after-the-tallest-man-in-the-world-511577/](https://www.guinnessworldrecords.com/news/2019/2/a-history-of-record-breaking-giants-100-years-after-the-tallest-man-in-the-world-511577/){:target="_blank"}
-4. [https://en.wikipedia.org/wiki/Chebyshev%27s_inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality){:target="_blank"}
-5. [https://en.wikipedia.org/wiki/Standard_deviation](https://en.wikipedia.org/wiki/Standard_deviation){:target="_blank"}
-6. [https://en.wikipedia.org/wiki/List_of_the_verified_shortest_people](https://en.wikipedia.org/wiki/List_of_the_verified_shortest_people){:target="_blank"}
+1. [worldpopulationreview / average height by country](https://worldpopulationreview.com/countries/average-height-by-country/){:target="_blank"}
+2. [worldpopulationreview.com / japan population](https://worldpopulationreview.com/countries/japan-population/){:target="_blank"}
+3. [guinnessworldrecords.com / record breaking giants](https://www.guinnessworldrecords.com/news/2019/2/a-history-of-record-breaking-giants-100-years-after-the-tallest-man-in-the-world-511577/){:target="_blank"}
+4. [en.wikipedia.org / Chebyshev%27s inequality](https://en.wikipedia.org/wiki/Chebyshev%27s_inequality){:target="_blank"}
+5. [en.wikipedia.org / Standard deviation](https://en.wikipedia.org/wiki/Standard_deviation){:target="_blank"}
+6. [en.wikipedia.org / verified shortest people](https://en.wikipedia.org/wiki/List_of_the_verified_shortest_people){:target="_blank"}
+
