@@ -519,8 +519,8 @@ $$f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
 I don't want you to try so hard to understand what is this equation, how it was found and
 why it is like that. Instead, if you noticed that the only unknowns in this equation are the mean and the variance (the standard deviation can be found through variance), it is sufficient. And, if you plot this equation, you get the curve shown below.
 
-Here we have an example of a normal distribution that is drawn using randomly generated
-data that are representing the height of a Japanese man.
+Here we have an example of a normal distribution that is drawn on a histogram plot using randomly generated
+data that are representing height values of Japanese men.
 
 
 <div class="text-center" id="normal-curve">
@@ -528,8 +528,9 @@ data that are representing the height of a Japanese man.
     <p>Randomly generated normal distribution representing height of Japanese men</p>
 </div>    
 
-Now we are ready to go back to the contest and make some educated guess. You are planning to guess 172cm (the mean value) as this person's height, 
-but you also want to be sure that you have a good enough probability of winning that katana. You decide that if the probability of height is in the range $168 < height < 176$ is more than 25%, you are going to go with the mean value. So, the next thing you do is to calculate this probability.
+Now we are ready to go back to the contest and make an educated guess. You are planning to guess 172cm (the mean value) as this person's height, 
+but you also want to be sure that you have a good enough probability of winning that
+katana. You decide that if the probability of height being in the range $168 < height < 176$ is more than 25%, you are going to go with the mean value. So, the next thing you do is to calculate this probability.
 
 As we said before, we calculate probability in a range by calculating the area under
 the curve that is covering that range:
@@ -661,15 +662,14 @@ $$Population \ Variance = \sigma^2 = \frac{\sum_{i=1}^{N}{(x_i - \mu)^2}}{N}$$
 
 Where $N$ is the number of items in the population
 
-The equation for estimating the variance with a sample taken from the population, we use slightly 
-different equation:
+The equation for estimating the variance is slightly different:
 
 $$Sample \ Variance = s^2 = \frac{\sum_{i=1}^{n}{(x-\bar{x})^2}}{n-1}$$
 
 Where $n$ is the number of items in the sample.
 
 * **Standard Deviation** is equal to the square root of variance. It is sometimes useful to think in terms
-of standard deviation, because of [this]({{page.url}}#std-table)
+of it, because it gives us an idea about minimum amount of data within a number of standard deviations of the mean.
 
 $$Standard \ Deviation = \sigma = \sqrt{\sigma^2}$$
 
