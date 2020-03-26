@@ -136,7 +136,7 @@ decide how many samples you are going to use, however, keep in mind that the mor
 you use, the less error you will have.
 
 Getting back to the contest, now you know another information that can be useful to you
-to better guess the heigh of this Japanese man: the mean value. A quick check from the internet
+to better guess the height of this Japanese man: the mean value. A quick check from the internet
 showed that it is 172cm. Now you have a better idea of how tall this person could be. 
 Having no further information, you could still guess it as 172, and still have better than before chance of winning the contest. But, you are still worried that this information might not be very reliable. Why? Look at the graph below: 
 
@@ -285,7 +285,7 @@ variance in your data
 </div>    
 
 You can see from the figure above that most of the data points are collected around mean. Because of
-the variance is low, the number of extremes (both very low and very high values of heigh) cases are very rare. 
+the variance is low, the number of extremes (both very low and very high values of height) cases are very rare. 
 Because of the variance is not in the same units as values in this graph, we can't directly show it on the graph
 (remember the square in its equation), however knowing the definition of variance allows us to imagine how our data would look like without even a need to look at its graph. As a side note, we can, and we will show the standard
 deviation on the distribution graph when we talk about it.
