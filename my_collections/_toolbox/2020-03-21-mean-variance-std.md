@@ -638,7 +638,7 @@ Based on this distribution, the probability that the height of a Japanese man is
 Considering there are many more possible height values, you think this is a pretty good 
 probability, and make your final guess with 172cm.
 
-Congrulations! You won the katana!
+Congratulations! You won the katana!
 
 <div class="text-center">
     <img src="{{site.url}}/assets/img/toolbox/mean_variance/you_won.png" class="img-fluid" alt="you won the katana">
@@ -682,7 +682,7 @@ $$Standard \ Deviation = \sigma = \sqrt{\sigma^2}$$
 samples are distributed. However the curve has some [advantages]({{page.url}}#advantages-of-curve)
 over a histogram. 
 
-* Normal distribution is a continues probability distribution, hence it is represented with a 
+* Normal distribution is a continuous probability distribution, hence it is represented with a 
 probability density function:
 
 $$f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
