@@ -153,9 +153,10 @@ Now look at this one:
 </div>    
 
 
+<span id="why-guess-with-mean"></span>
 <br>
 
-{% assign collapse-unique-id = "why-guess-with-mean" %}
+{% assign collapse-unique-id = "_why-guess-with-mean" %}
 {% assign collapse-btn-title = "Why is it a good idea to guess with mean?" %}
 {% assign collapse-git-link = "" %}
 {% capture collapse-content %}
@@ -247,9 +248,10 @@ diversity. Mean gives us information about the center of our data, and the varia
 
 Looking at a histogram plot could be very informative when we want to see the variance in data:
 
+<span id="what-is-a-histogram-plot"></span>
 <br>
 
-{% assign collapse-unique-id = "what-is-a-histogram-plot" %}
+{% assign collapse-unique-id = "_what-is-a-histogram-plot" %}
 {% assign collapse-btn-title = "What is a histogram?" %}
 {% assign collapse-git-link = "" %}
 {% capture collapse-content %}
@@ -348,9 +350,10 @@ $$s^2 = \frac{\sum_{i=1}^{n}{(x_i - \bar{x})^2}}{n-1}$$
 {{ jumbotron-include | markdownify }}
 
 
+<span id="why-do-we-divide-with-n-1"></span>
 <br>
 
-{% assign collapse-unique-id = "why-do-we-divide-with-n-1" %}
+{% assign collapse-unique-id = "_why-do-we-divide-with-n-1" %}
 {% assign collapse-btn-title = "Why denominator is n-1?" %}
 {% assign collapse-git-link = "" %}
 {% capture collapse-content %}
@@ -540,9 +543,11 @@ the curve that is covering that range:
     <p>Area Under the Curve in the range 168-176cm</p>
 </div>    
 
+
+<span id="how-to-plot-normal-and-calculate-auc"></span>
 <br>
 
-{% assign collapse-unique-id = "how-to-plot-normal-and-calculate-auc" %}
+{% assign collapse-unique-id = "_how-to-plot-normal-and-calculate-auc" %}
 {% assign collapse-btn-title = "How to plot a normal distribution and calculate AUC?" %}
 {% assign collapse-git-link = "https://github.com/kivancyuksel/emkademy/blob/master/research/toolbox/normal_distribution_and_auc_score.ipynb" %}
 {% capture collapse-content %}
