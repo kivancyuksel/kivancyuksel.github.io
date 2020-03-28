@@ -58,7 +58,7 @@ shortest man has ever lived and you can further reduce the range into $54.6 < he
 Why do we even have something called mean? What information does it give us? When is it useful?
 Well, we have already talked about the diversity on earth. We can't just say that humans
 are 160cm tall. But, we can say that, for example, the average height of Japanese men is
-172cm (on 2020 \[1\]). It gives us information about the **center** of diversity.
+172cm (in 2020 \[1\]). It gives us information about the **center** of diversity.
 
 {% capture jumbotron-content %}
 <h3>Mean</h3>
@@ -72,7 +72,7 @@ are 160cm tall. But, we can say that, for example, the average height of Japanes
 First of all, how this number was found? There are 2 ways you can get it:
 
 1) The first way is precise but very time-consuming. It includes measuring the height of every Japanese man (the *"population"* for this example), then summing all of the measurements and
-dividing it to the number of measurements. There are around 62 million men in Japan (on 2020 \[2\]), so:
+dividing it to the number of measurements. There are around 62 million men in Japan (in 2020 \[2\]), so:
 
 $$average_{male \ height} = \mu_{h_m} = \frac{h_1+h_2+h_3+\cdots+h_{62000000}}{62000000} $$
 
@@ -130,7 +130,7 @@ $$\bar{x} = \frac{\sum_{i=1}^{n}x_i}{n}$$
 
 $$\bar{h_m} = \frac{170 + 165 + 172 + 176 + 174 + 175 + 166 + 172}{8} = 171.25$$
 
-As can be seen from the example above, we couldn't get the reel average value when we
+As can be seen from the example above, we couldn't get the real average value when we
 used only a sample from our population, however, we get pretty close. It is up to you to
 decide how many samples you are going to use, however, keep in mind that the more samples
 you use, the less error you will have.
@@ -161,11 +161,11 @@ Now look at this one:
 {% assign collapse-git-link = "" %}
 {% capture collapse-content %}
 <p>For the sake of this explanation, let's imagine that all of the possible values of
-height of this Japanese man in the carnival are the values shown in the figure below:</p>
+height of this Japanese man at the carnival are the ones shown in the figure below:</p>
 <div class="text-center">
     <img src="{{site.url}}/assets/img/toolbox/mean_variance/close_spread.jpg" class="img-fluid" alt="example heights with mean 172 where spread is low">
 </div>    
-<p>Let's say that, instead of guessing with the mean value (172cm), you want to try your change with 164cm. We still don't know the actual height of this person, however, we can make some possible error analysis:</p>
+<p>Let's say that, instead of guessing with the mean value (172cm), you want to try your chance with 164cm. We still don't know the actual height of this person, however, we can make some possible error analysis:</p>
 <div class="text-center">
     <img src="{{site.url}}/assets/img/toolbox/mean_variance/why_guess_mean_1.jpg" class="img-fluid" alt="case when we guess 162cm">
 </div>    
@@ -289,19 +289,20 @@ variance in your data
 You can see from the figure above that most of the data points are collected around mean. Because of
 the variance is low, the number of extremes (both very low and very high values of height) cases are very rare. 
 Because of the variance is not in the same units as values in this graph, we can't directly show it on the graph
-(remember the square in its equation), however knowing the definition of variance allows us to imagine how our data would look like without even a need to look at its graph. As a side note, we can, and we will show the standard
+(we haven't seen its equation yet, but if you [take a look at it]({{page.url}}#_population_variance), there is a *square* in it), however knowing the definition of variance (which is going to be explained in just a moment) allows us to imagine how our data would look like without even a need to look at its graph. As a side note, we can, and we will show the standard
 deviation on the distribution graph when we talk about it.
 
 Going back to the contest, now you know why knowing variation gives us the confidence boost on our guess with the mean
 value. If we know that the data have low variance, there is a much higher chance that our guess with the mean value will be closer to the actual height of this Japanese gentleman.
 
+
+However, if you look at the figure below, you can see that the variance is very high. Although the mean
+is still 172cm, the data looks completely random. It is (almost) equally spread into each bin.
+
 <div class="text-center">
     <img src="{{site.url}}/assets/img/toolbox/mean_variance/histogram_hvariance.png" class="img-fluid" alt="histogram plot with high variance">
     <p>Histogram plot with high variance</p>
 </div>    
-
-However, if you look at the figure above, you can see that the variance is very high. Although the mean
-is still 172cm, the data looks completely random. It is (almost) equally spread into each bin.
 
 {% capture jumbotron-content %}
 <h3>Variance</h3>
@@ -329,6 +330,7 @@ the spread of data around the mean. So, as it was with mean, you can calculate t
 population, or estimate it on a sample taken from the population.
 
 
+<span id="_population_variance"></span>
 {% capture jumbotron-content %}
 <h3>Population Variance</h3>
 $$\sigma^2 = \frac{\sum_{i=1}^{N}{(x_i - \mu)^2}}{N}$$
@@ -480,7 +482,7 @@ You can look at [figure]({{page.url}}#normal-curve) below for visualization.
 
 <span id="scrollspy-item-4"></span>
 ## Putting All Together
-Now that we know both mean and variance, we can start talking about the normal distribution, and
+Now that we know both mean and variance, we can start talking about the *normal distribution*, and
 fitting a *curve* on our data to calculate some probabilities. There are many different
 probability distributions, however, I just want to make a gentle introduction to normal distribution
 to have an idea about how to use mean and variance. A curve gives us the same information that a 
@@ -489,7 +491,7 @@ histogram does. However, it has some advantages over a histogram. Namely:
 <span id="advantages-of-curve"></span>
 1. When we sample from a population, because of the way we selected those samples, some bins in the
 histogram might be unoccupied. So, what happens when we need to calculate that probability with the histogram? Since there are no values in that bin, does that mean that it is impossible to get a 
-probability for the values belong to that bin? It is possible when we use a curve,
+probability for the values belong to that bin? It is possible when we use a curve.
 2. We know that we have to choose several ranges to calculate the number of elements in a bin and to draw a histogram. Let's say one of the ranges we have chosen for height distribution is (160, 165). 
 But what happens if we want to calculate the probability of having a height between 163.24 and 164.95?
 How to calculate this with a histogram? Well, we cannot, but we can do it if we had a curve that fits
@@ -506,15 +508,15 @@ To draw a normal distribution, knowing only the mean and the variance is
 sufficient. Important things to know about normal distribution are:
 
 1. the total area under its curve is equal to 1.
-2. It is a continuous distribution, hence probabilities are calculated for a specific range,
+2. It is a *continuous distribution*, hence probabilities are calculated for a specific range,
 (e.g. probability of height being in the range 170-180) and the probability of a single point
 (e.g. probability of height being 170) is 0.
 
 I don't want to go into so many details about the normal distribution, because this is a
 post mainly about mean and variance and how to use them. However, I am sure that many of you
 will wonder how this curve was drawn. In continuous probability distributions
-(where values are specified with *ranges* instead of singular values), probability density
-functions are used to describe these distributions. And, the probability density function
+(where values are specified with *ranges* instead of singular values), *probability density
+functions* are used to describe these distributions. And, the probability density function
 for the normal distribution is as follows:
 
 $$f(x) = \frac{1}{\sigma \sqrt{2\pi}}e^{\frac{1}{2}(\frac{x-\mu}{\sigma})^2}$$
